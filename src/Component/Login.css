@@ -1,0 +1,80 @@
+.sso {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #03940a ,#1F6E8C); /* Gradient from pink to orange */
+    color: white;
+    cursor: pointer;
+    /* transition: background 0.3s ease, transform 0.3s ease; */
+  }
+  
+  /* Button hover effect */
+  .sso:hover {
+    background: #03940a !important; /* Inverted gradient */
+    transform: scale(1.05); /* Optional: slight scaling on hover */
+  }
+
+  .userlogin{
+    font-size: 15px;
+    background: linear-gradient(to right, #1F6E8C, #84A7A1);  
+}
+
+    .userlogin:hover {
+        background: #1F6E8C; /* Inverted gradient */
+        transform: scale(1.05); /* Optional: slight scaling on hover */
+      }
+
+
+  .logo{
+    height: 100px;
+  }
+
+  .logo:hover {
+    transform: scale(1.1); /* Optional: slight scaling on hover */
+  }
+
+/* Main card container */
+.maincard {
+    
+    background-color:white ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 90%; /* Default width for small screens */
+    max-width: 380px; /* Max width for larger screens */
+    height: auto; /* Default height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 35px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sideimg{
+  transform: rotate(90deg) scale(1.2);
+  position: absolute; /* Position the image within the container */
+    left: 0; /* Align the image to the left */
+    bottom: 0;
+}
+.maincard:hover {
+    transform:  scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card content styling */
+
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 600px) {
+    .maincard {
+        top: 15% !important; /* Adjust to be more centered vertically on small screens */
+        height: auto; /* Allow the height to adjust based on content */
+        padding: 15px 25px;
+        width: 95%;
+    }
+
+   
+}
+
+

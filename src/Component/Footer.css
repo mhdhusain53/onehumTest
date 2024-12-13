@@ -1,0 +1,27 @@
+.foot{
+    position: fixed;
+    bottom: 0;
+    /* background: linear-gradient(90deg,#69BE33 , #0B8ECD) !important; */
+    background: linear-gradient(to right, #0E2954,#0E2954) !important;
+    
+    width: 100%;
+    padding: 2px 2%;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.flogo{
+    max-height: 45px ;
+    max-width: 15%;
+
+}
+
+@media (max-width: 768px) {
+    .foot {
+        padding: 5px 3%;
+        font-size: 12px;
+    }
+    .flogo{
+        height: 30px;
+    }
+}

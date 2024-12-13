@@ -1,0 +1,46 @@
+.navv{
+    /* background-color: #FFBF78; */
+    background: #0E2954;
+    padding: 8px 20px;
+    z-index: 10 !important;
+}
+
+@media (max-width: 768px) {
+    .navv{
+        padding: 8px 8px;
+    }
+    
+   
+}
+.selectcategorybg{
+    background-color: #EF7701 ;
+}
+
+.categorybtn{
+    border: #2E8A99 2px solid;
+}
+
+
+.categorybtn:hover{
+    transform: scale(1.04);
+    border: #EF7701 2px solid;
+}
+
+.subnav{
+    /* background-color: #FFEEA9; */
+    background: linear-gradient(to right, #2E8A99, #2E8A99);
+  
+    position: relative !important;
+    z-index: 0 !important;
+}
+
+#signoutbox{
+    /* position: fixed; */
+    z-index: 2147483;
+}
+
+.content{
+    /* background-color: #f5f5f5; */
+z-index: -1 !important;
+    
+}

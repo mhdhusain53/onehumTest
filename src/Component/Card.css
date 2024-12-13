@@ -1,0 +1,241 @@
+.sidebar{
+    position: absolute;
+    z-index: 99999 !important;
+    top: 56px;
+    left: 0;
+    right: 0;
+    height: auto;
+}
+
+.card-all {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    right: 0;
+    height: 65%;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    align-items:start !important;
+    width: 85% !important;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 3%;
+    box-sizing: border-box;
+    z-index: 0 !important;
+}
+
+
+.card {
+    position: relative;
+    padding-top: 0;
+    margin-bottom: 8px;
+    flex: 1 1 25% !important;
+    /* Set each card to 19% width to fit 5 per row */
+    max-width: 22.5% !important;
+    background: #fff;
+    
+    text-align: center;
+     height: 200px !important; 
+    box-shadow: inset 0 -35px 0 -1px #2E8A99, 0 6px 20px rgba(0, 0, 0, 0.19);
+    /* box-shadow: inset 0 -35px 0 -1px #2E8A99,inset 0 -600px 0 -1px #fff, 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    border-radius: 8px !important;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.card:hover {
+    transform: translateY(0) scale(1.075) translateZ(0);
+
+    box-shadow: inset  0 -600px 0 -1px #2E8A99, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 3px solid #fff;
+    /* box-shadow: inset 0 -35px 0 -1px #e98324, 0 6px 20px rgba(0, 0, 0, 0.19); */
+} 
+
+.cardimg{
+    height: 50px;
+}
+
+.fcolor{
+    /* background-color: #0E2954; */
+}
+
+
+.imgc{
+    height: 125px !important;
+}
+
+.titlec{
+    font-size: 25px;;
+}
+
+
+.tagc{
+    font-size: 18px;
+    padding-top: 5px;;
+}
+
+.footerc{
+    font-size: 15px;
+}
+.card-img {
+    display: inline-block;
+    margin: auto;
+    height: 53%;
+    width: auto;
+    padding-top: 18px;
+}
+
+.card-body {
+    flex-grow: 1;
+    margin-top: 12px;
+    padding: 0;
+    /* Ensures the card body takes up remaining space */
+}
+
+.card-title {
+    padding: 0 5px;
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: center;
+    height: 48% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-text {
+    text-align: center !important;
+    font-size: 15px;
+    height: 35% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.stretched-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+
+  @media (max-width: 1700px) {
+    .card-all {
+        width: 85% !important;
+    }
+
+    .card {
+        height: 160px !important;
+        
+    }
+
+    .imgc{
+        height: 100px !important;
+    }
+    
+    .titlec{
+        font-size: 21px;;
+    }
+    
+    
+    .tagc{
+        font-size: 15px;
+        padding-top: 2px;;
+    }
+    
+    .footerc{
+        font-size: 13px;
+    }
+
+    .imgc {
+        height: 48%;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 23% !important;
+        max-width: 22% !important;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 860px) {
+    .card {
+        flex: 1 1 30% !important;
+        max-width: 29% !important;
+        /* height: 210px !important; */
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+    
+    
+}
+
+@media (max-width: 600px) {
+    .card-all{
+        width: 90% !important;
+    }
+    .card {
+        flex: 1 1 48% !important;
+        /* max-width: 47% !important;
+        height: 210px !important; */
+    }
+   
+}
+
+@media (max-width: 520px) {
+    .card-all{
+        top: 20% ;
+        height: 70%;
+        width: 95% !important;
+        
+    }
+    .card {
+        flex: 1 1 95% !important;
+        max-width: 80% !important;
+        height: 190px !important;
+    }
+    .card-body {
+        margin-top:7px;
+    }
+    
+   
+}
+
+
+.card-all::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.card-all::-webkit-scrollbar-track {
+    background-color: #e0e0e0; /* Track color */
+    border-radius: 4px;
+}
+
+.card-all::-webkit-scrollbar-thumb {
+    background-color: #707070; /* Thumb color */
+    border-radius: 4px;
+}
+
+.card-all::-webkit-scrollbar-thumb:hover {
+    background-color: #707070; /* Thumb color on hover */
+}
