@@ -1,12 +1,6 @@
 .sidebar{
-    position: absolute;
     z-index: 99999 !important;
-    top: 56px;
-    left: 0;
-    right: 0;
-    height: auto;
 }
-
 .card-all {
     position: absolute;
     top: 18%;
@@ -25,8 +19,6 @@
     box-sizing: border-box;
     z-index: 0 !important;
 }
-
-
 .card {
     position: relative;
     padding-top: 0;

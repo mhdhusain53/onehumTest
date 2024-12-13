@@ -111,43 +111,54 @@ const Content = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="sidebar relative flex z-100 flex-col space-y-2 p-4 md:hidden bg-gray-100 border-t ">
+          <div className="absolute top-14 right-0 w-64 bg-white shadow-xl shadow-gray-300 z-50 sidebar  flex z-50 flex-col space-y-2 p-4 lg:hidden bg-gray-100 border-t ">
             {/* Buttons A, B, C */}
 
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 w-full">
-              Productivity
-            </button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 w-full">
-              Dashboards
-            </button>
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`md:hidden px-4 w-75 mx-auto py-2 rounded-full focus:outline-none categorybtn hover:shadow-2xl categoryhover shadow-black ${selectedCategory === category
+                  ? 'selectcategorybg text-white' // Style for the selected button
+                  : 'bg-white text-gray-700'   // Style for the unselected buttons
+                  }`}
+              >
+                {category}
+              </button>
+            ))}
 
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 w-full">
-              Self-Serve
-            </button>
 
             {/* Search Box */}
-            <div className="flex items-center space-x-2">
+
+            <div className="flex items-center space-x-2 w-50 md:w-75 mx-auto">
+
+
               <FaSearch className="text-gray-500" />
+
               <input
                 type="text"
-                placeholder="Search Widgets"
-                className="p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400 w-full"
+                placeholder="Search Products"
+                className="p-2 border font-normal border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-orange-400 searchOutline w-full"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
 
+
             {/* Buttons Favorite, All */}
-            {/* <button className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 w-full">
-              Favorite
-            </button>
-            <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 w-full">
-              All
-            </button> */}
+           <label className="flex items-center mx-auto mt-2 space-x-2  ">
+              <input
+                type="checkbox"
+                className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400 checked:bg-black"
+              />
+              <span className="text-gray-600">Favorites</span>
+            </label>
           </div>
         )}
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 z-10 p-6 overflow-hidden " id="bgimg" >
+      <div className="flex-1 z-0 p-6 overflow-hidden " id="bgimg" >
         <Cards searchText={searchQuery} category={selectedCategory} />
       </div>
     </div>
