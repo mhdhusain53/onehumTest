@@ -72,12 +72,17 @@ const Navbar = (props) => {
     return (
         <div>
             <nav className="navbar flex justify-between items-center   ">
-                <Link className="navbar-brand nav-img" to="/home">
-                    <img src="/images/OneHumLogo2.png" className="nav-image" />
+
+                <Link className="flex-grow flex justify-left ">
+                    <img
+                        src="/images/OneHumLogo2.png"
+                        alt="Center Logo"
+                        className="h-auto w-20 sm:w-24 md:w-32 lg:w-36  cursor-pointer"
+                    />
                 </Link>
 
-                {/* Center Image */}
-                <div className="relative flex-shrink-0 text-right ml-auto nav-img" ref={boxRef}>
+                {/* Right Div */}
+                <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base  z-50  w-32 sm:w-40  md:w-44 lg:w-56 " ref={boxRef}>
                     {/* Welcome Text and Name */}
                     <p className="text-gray-300">
                         Welcome,
@@ -90,6 +95,37 @@ const Navbar = (props) => {
                     </p>
 
                     {/* Hidden Box */}
+                    {isBoxVisible && (<div
+                        className={`absolute right-2 mt-2 bg-white shadow-md rounded-lg w-32 md:w-40  hover:bg-gray-100
+            }`}
+                        id="signoutbox"
+                    >
+                        <button
+                            onClick={() => props.logout()}
+                            className="block w-full px-2 py-2 text-left text-xs sm:text-sm md:text-base rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500"
+                        >
+                            Sign Out
+                        </button>
+                    </div>)}
+                </div>
+
+
+
+                {/* <Link className="navbar-brand nav-img" to="/home">
+                    <img src="/images/OneHumLogo2.png" className="nav-image" />
+                </Link> */}
+
+                {/* Center Image */}
+                {/* <div className="relative flex-shrink-0 text-right ml-auto nav-img" ref={boxRef}>
+                    <p className="text-gray-300">
+                        Welcome,
+                        <span
+                            onClick={toggleBox}
+                            className="block cursor-pointer text-gray-100 hover:underline hover:decoration-gray-200"
+                        >
+                            {props.name}
+                        </span>
+                    </p>
                     {isBoxVisible && (
                         <div className="absolute right-0 mt-2 bg-white shadow-md rounded-lg w-40">
                             <button
@@ -100,76 +136,36 @@ const Navbar = (props) => {
                             </button>
                         </div>
                     )}
-                </div>
-                {/* <div className="w-25 flex items-center">
-                    <button
-                        className="text-black ml-auto " id="" name="menu"
-                        onClick={toggleSidebar}
-                        ref={menuButtonRef} // Attach ref to menu button
-                    >
-                        <svg className="w-6 h-6 sm:w-8 sm:h-8 hover:w-10 hover:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
                 </div> */}
             </nav>
 
             {/* Side Navbar */}
-            {/* <div
-                ref={sidebarRef} // Attach ref to sidebar
-                className={`highz fixed top-0 right-0 w-64 h-full bg-gray-800 text-white transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
-                    }`}
-            >
-                <button
-                    className="absolute top-4 right-4 text-white"
-                    onClick={toggleSidebar}
-                >
-                    <svg className="w-6 h-6 sm:w-8 sm:h-8 hover:w-10 hover:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-                <ul className="mt-16 space-y-4 px-4">
 
-                    {Cards_Data
-                        .filter(item => {
-                            var usr = UserAccess.find(user => user.email.toLowerCase() == props.username.toLowerCase()) //get the info of user
-                            return usr ? usr.pagesid.includes(item.id) && item.id != props.val.id : false;
-                        })
-                        .map((item) => (
-                            <li key={item.id}>
-                                <Link className="text-white hover:text-gray-300" to={`../${item.route}`}>
-                                    {item.title}
-                                </Link>
-                            </li>
-                        ))}
 
-                </ul>
-            </div> */}
-
-            <div className="subnav border-b shadow-sm pl-8">
+            <div className="subnav border-b shadow-sm pl-4 md:pl-8">
                 {/* Desktop View */}
-                <div className="hidden md:flex items-center justify-between p-2">
+                <div className="flex items-center justify-end xl:justify-between py-2">
                     {/* Buttons A, B, C */}
-                    <div className="flex items-center space-x-4">
+                    <div className="hidden xl:flex items-center space-x-4">
 
-                        <button className="px-2   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-100 hover:text-gray-100">
+                        <button className="   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-100 hover:text-gray-100">
                             <Link className="hover:decoration-gray-100 hover:text-gray-100" to="../home">
                                 Products
                             </Link>
                         </button>
 
-                        <h2 className="text-xl font-bold text-gray-100"> {`>`} </h2>
+                        <h2 className="text-xl font-bold text-gray-100 mb-1"> {`>`} </h2>
 
-                        <button className="px-2   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-500 ">
+                        <button className="   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-500 ">
                             <Link className="hover:decoration-gray-100 hover:text-gray-100" to="../home">
                                 {props.val.category}
                             </Link>
 
                         </button>
 
-                        <h2 className="text-xl font-bold text-gray-100"> {`>`} </h2>
+                        <h2 className="text-xl font-bold text-gray-100 mb-1"> {`>`} </h2>
 
-                        <button className="px-2 cursor-pointer text-gray-100 underline decoration-gray-200 hover:decoration-gray-100 hover:text-gray-100">
+                        <button className=" cursor-pointer text-gray-100 underline decoration-gray-200 hover:decoration-gray-100 hover:text-gray-100">
                             {props.val.title}
                         </button>
 
@@ -180,8 +176,8 @@ const Navbar = (props) => {
                             })
                             .map((item) => (
                                 <>
-                                    <h2 className="text-xl text-gray-200 font-semibold"> {`|`} </h2>
-                                    <button className="px-2   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-100 ">
+                                    <h2 className="text-xl mb-1 text-gray-200 font-semibold"> {`|`} </h2>
+                                    <button className="   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-100 ">
                                         <Link className="hover:decoration-gray-100 hover:text-gray-100" to={`../${item.route}`}>
                                             {item.title}
                                         </Link>
@@ -192,7 +188,7 @@ const Navbar = (props) => {
 
                     </div>
 
-                    <h2 className="absolute text-white pb-1 title text-center flex-1 text-l sm:text-2xl md:text-3xl font-bold left-1/2 -translate-x-1/2">
+                    <h2 className="md:absolute text-white pb-1 title text-left md:text-center flex-1 text-xl sm:text-2xl md:text-3xl font-bold md:left-1/2 md:-translate-x-1/2">
                         {props.val.title}
                     </h2>
 
@@ -214,10 +210,9 @@ const Navbar = (props) => {
             </div>
 
             {/* Filters Section (Full Height Below Navbar) */}
-            <div
+            {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-14 right-0 w-64 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300 ${isFilterVisible ? "translate-x-0" : "translate-x-full"
-                    } h-full`}
+                className={`absolute top-14 right-0 w-64 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300  h-full`}
 
             >
                 <h2 className="text-xl text-left pl-4 text-white  sidenavbar font-semibold mb-2 border-b shadow-sm">Categories</h2>
@@ -262,7 +257,7 @@ const Navbar = (props) => {
 
                     </ul>
                 </div>
-            </div>
+            </div>)}
         </div >
     );
 };

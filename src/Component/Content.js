@@ -140,7 +140,7 @@ const Content = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-        ref={sidebarRef} className="absolute top-14 right-0 w-60 bg-white shadow-xl shadow-gray-600 flex z-50 flex-col space-y-2 p-4 lg:hidden bg-gray-100 border-t "
+        ref={sidebarRef} className="absolute top-14 right-0 w-52 bg-white shadow-xl shadow-gray-600 flex z-50 flex-col space-y-2 py-4 px-3 lg:hidden bg-gray-100 border-t "
           id="sidenavbar">
 
 
@@ -172,7 +172,7 @@ const Content = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`md:hidden px-4 w-100  py-1 my-0  border-l-2 border-gray-300 focus:outline-none  hover:shadow-2xl categoryhover shadow-black ${selectedCategory === category
+              className={`md:hidden px-1 w-100  py-1 my-0  border-l-2 border-gray-300 focus:outline-none  hover:shadow-2xl categoryhover shadow-black ${selectedCategory === category
                 ? ' ' // Style for the selected button
                 : 'bg-white text-gray-700'   // Style for the unselected buttons
                 }`}

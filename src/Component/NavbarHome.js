@@ -66,7 +66,7 @@ const NavbarHome = (props) => {
         >
           <button
             onClick={() => props.logout()}
-            className="block w-full px-2 py-2 text-left text-sm md:text-base rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500"
+            className="block w-full px-2 py-2 text-left text-xs sm:text-sm md:text-base rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500"
           >
             Sign Out
           </button>
