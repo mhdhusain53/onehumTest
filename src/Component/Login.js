@@ -92,7 +92,7 @@ const particlesLoaded = useCallback(async container => {
         {/* <img src="/images/sideIcon.png" alt="Placeholder Image" class="absolute z-20 top-20 left-32 w-2/5" /> */}
       </div>
 
-      <div class="lg:p-28 md:p-52 sm:20 p-8 w-full lg:w-1/2 flex flex-col justify-center h-screen">
+      <div class="lg:py-28 lg:px-20 md:p-52 sm:20 px-8 w-full lg:w-1/2 flex flex-col justify-center h-screen">
      
         <div id='bgg'>
 
@@ -175,7 +175,7 @@ className="z-0"
           <div class="flex justify-center ">
             <img src="images/OneHumLogo.png"
               alt="One Hum Logo"
-              class=" mb-8 mt-6 logo" />
+              class=" mb-8 mt-1 md:mt-6  logo" />
           </div>
           {!isAuthenticated&&(
           <form action="#" method="POST" class="space-y-4 maincard mx-auto">
