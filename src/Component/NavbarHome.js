@@ -26,9 +26,9 @@ const NavbarHome = (props) => {
 
 
   return (
-    <nav className="flex navv items-center justify-between shadow-md bg-beige  ">
+    <nav className="flex navv items-center justify-between shadow-md bg-beige ">
       {/* Left Image */}
-      <div className="flex-shrink-0 h-auto w-32 sm:w-40  md:w-44 lg:w-56">
+      <div className="hidden md:flex flex-shrink-0 h-auto w-32 sm:w-40  md:w-44 lg:w-56 ">
         <img
           src="/images/CompanyLogo.png"
           alt="Left Logo"
@@ -37,11 +37,11 @@ const NavbarHome = (props) => {
       </div>
 
       {/* Center Image */}
-      <div className="flex-grow flex justify-center ">
+      <div className="flex-grow flex justify-left md:justify-center">
         <img
           src="/images/OneHumLogo2.png"
           alt="Center Logo"
-          className="h-auto w-20 sm:w-20 md:w-32 lg:w-36  cursor-pointer"
+          className="h-auto w-20 sm:w-24 md:w-32 lg:w-36  cursor-pointer"
         />
       </div>
 

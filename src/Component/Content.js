@@ -45,9 +45,20 @@ const Content = () => {
       {/* Sub-navbar */}
       <div className="subnav border-b shadow-sm px-2 ">
         {/* Desktop View */}
-        <div className="flex items-center md:justify-between justify-end p-2 px-3">
+        <div className="flex items-center  justify-between py-2 pr-3">
+
+          <div className=" md:hidden  flex-shrink-0 h-auto w-32 sm:w-40  md:w-44 lg:w-56 ">
+            <img
+              src="/images/CompanyLogo.png"
+              alt="Left Logo"
+              className="h-8 sm:h-10 lg:h-12 cursor-pointer"
+            />
+          </div>
+
+
           {/* Buttons A, B, C */}
           <div className=" hidden md:flex items-center space-x-4">
+
 
             {categories.map((category) => (
               <button
@@ -93,11 +104,11 @@ const Content = () => {
           </div>
 
           <div className="flex lg:hidden justify-end items-right px-2">
-          <FaBars
-            className="text-gray-700 text-2xl cursor-pointer"
-            onClick={toggleMenu}
-          />
-        </div>
+            <FaBars
+              className="text-gray-100 hover:text-gray-800 btnn rounded-md text-2xl cursor-pointer"
+              onClick={toggleMenu}
+            />
+          </div>
 
         </div>
 
@@ -112,7 +123,7 @@ const Content = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="absolute top-10 right-0 w-64 bg-white shadow-xl shadow-gray-300 z-50  flex z-50 flex-col space-y-2 p-4 lg:hidden bg-gray-100 border-t "
-          id="sidenavbar">
+            id="sidenavbar">
             {/* Buttons A, B, C */}
 
             {categories.map((category) => (
@@ -147,7 +158,7 @@ const Content = () => {
 
 
             {/* Buttons Favorite, All */}
-           <label className="flex items-center mx-auto mt-2 space-x-2  ">
+            <label className="flex items-center mx-auto mt-2 space-x-2  ">
               <input
                 type="checkbox"
                 className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400 checked:bg-black"
