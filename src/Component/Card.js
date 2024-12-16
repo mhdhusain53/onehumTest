@@ -9,7 +9,7 @@ function Card(props) {
         <div className="w-[200px] bg-white shadow-2xl shadow-black rounded-md border border-gray-200  card text-gray-800 hover:text-white">
         <div className="flex px-2">
           {/* Logo Section (1/3) */}
-          <div className="lg:w-2/5 w-1/3 flex items-center justify-center p-2  ">
+          <div className="lg:w-2/5 w-1/3 flex items-center justify-center py-2 px-1 ">
             <img
               src={props.val.image}
               alt="Logo"
@@ -17,7 +17,7 @@ function Card(props) {
             />
           </div>
           {/* Title and Tagline Section (2/3) */}
-          <div className="w-2/3 py-3 pl-3 text-left justify-center my-auto  border-blue-800">
+          <div className="w-2/3 py-3 pl-2 text-left justify-center my-auto  border-blue-800">
             <h3 className="titlec font-semibold ">{props.val.title}</h3>
             <p className="text-base tagc  mt-1 ">{props.val.tagline}</p>
           </div>

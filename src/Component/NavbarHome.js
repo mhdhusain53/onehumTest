@@ -28,11 +28,11 @@ const NavbarHome = (props) => {
   return (
     <nav className="flex navv items-center justify-between shadow-md bg-beige  ">
       {/* Left Image */}
-      <div className="flex-shrink-0">
+      <div className="flex-shrink-0 h-auto w-32 sm:w-40  md:w-44 lg:w-56">
         <img
           src="/images/CompanyLogo.png"
           alt="Left Logo"
-          className="h-auto w-32 sm:w-40  md:w-44 lg:w-56 cursor-pointer"
+          className="h-8 sm:h-10 lg:h-12 cursor-pointer"
         />
       </div>
 

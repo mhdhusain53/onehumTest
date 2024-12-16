@@ -92,7 +92,7 @@ const Content = () => {
 
           </div>
 
-          <div className="flex lg:hidden justify-end items-right p-2">
+          <div className="flex lg:hidden justify-end items-right px-2">
           <FaBars
             className="text-gray-700 text-2xl cursor-pointer"
             onClick={toggleMenu}
@@ -111,7 +111,8 @@ const Content = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="absolute top-14 right-0 w-64 bg-white shadow-xl shadow-gray-300 z-50 sidebar  flex z-50 flex-col space-y-2 p-4 lg:hidden bg-gray-100 border-t ">
+          <div className="absolute top-10 right-0 w-64 bg-white shadow-xl shadow-gray-300 z-50  flex z-50 flex-col space-y-2 p-4 lg:hidden bg-gray-100 border-t "
+          id="sidenavbar">
             {/* Buttons A, B, C */}
 
             {categories.map((category) => (

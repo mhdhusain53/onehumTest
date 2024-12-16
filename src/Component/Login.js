@@ -92,7 +92,7 @@ const particlesLoaded = useCallback(async container => {
         {/* <img src="/images/sideIcon.png" alt="Placeholder Image" class="absolute z-20 top-20 left-32 w-2/5" /> */}
       </div>
 
-      <div class="lg:py-28 lg:px-20 md:p-52 sm:20 px-8 w-full lg:w-1/2 flex flex-col justify-center h-screen">
+      <div class="lg:py-28 lg:px-20 md:p-52 sm:20 p-8 pt-1 w-full lg:w-1/2 flex flex-col justify-center h-screen">
      
         <div id='bgg'>
 
