@@ -1,4 +1,12 @@
+
+
+#sidenavbar {
+    z-index: 2147483647 !important; 
+}
+
 .navv{
+
+
     /* background-color: #FFBF78; */
     background: #0E2954;
     padding: 8px 20px;
@@ -17,7 +25,7 @@
 }
 
 .categorybtn{
-    border: #2E8A99 2px solid;
+    border-left: #2E8A99 1px solid;
 }
 
 
