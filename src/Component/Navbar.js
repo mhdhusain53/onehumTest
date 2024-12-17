@@ -73,7 +73,7 @@ const Navbar = (props) => {
         <div>
             <nav className="navbar flex justify-between items-center   ">
 
-                <Link className="flex-grow flex justify-left ">
+                <Link className="flex-grow flex justify-left " to="../home">
                     <img
                         src="/images/OneHumLogo2.png"
                         alt="Center Logo"
@@ -144,7 +144,7 @@ const Navbar = (props) => {
 
             <div className="subnav border-b shadow-sm pl-4 md:pl-8">
                 {/* Desktop View */}
-                <div className="flex items-center justify-end xl:justify-between py-2">
+                <div className="flex items-center justify-end xl:justify-between py-1">
                     {/* Buttons A, B, C */}
                     <div className="hidden xl:flex items-center space-x-4">
 
@@ -212,7 +212,7 @@ const Navbar = (props) => {
             {/* Filters Section (Full Height Below Navbar) */}
             {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-14 right-0 w-64 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300  h-full`}
+                className={`absolute top-14 right-0 w-52 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300  h-full`}
 
             >
                 <h2 className="text-xl text-left pl-4 text-white  sidenavbar font-semibold mb-2 border-b shadow-sm">Categories</h2>

@@ -18,10 +18,10 @@
 
 @media (max-width: 768px) {
     .foot {
-        padding: 5px 3%;
-        font-size: 12px;
+        padding: 3px 3%;
+        font-size: 10px;
     }
     .flogo{
-        height: 30px;
+        height: 33px;
     }
 }
