@@ -52,6 +52,13 @@ var UserAccess=[
         pagesid: [
             1,2,3,4,5,6,7
         ]
+    },{
+        userid : 1008,
+        email: "onehum@acuitas360.com",
+        name: "Admin",
+        pagesid: [
+            1,2,3,4,5,6,7
+        ]
     },
 ]
 
