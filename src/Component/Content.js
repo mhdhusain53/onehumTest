@@ -99,6 +99,7 @@ const Content = () => {
                     </svg>
                   </div>
                   <input type="search"
+                  value={searchQuery}
                     id="default-search"
                     onChange={(e) => setSearchQuery(e.target.value)}
                     class="block w-full p-2 pl-5 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring focus:ring-orange-400" placeholder="Search Products" />
@@ -174,8 +175,9 @@ const Content = () => {
               </div>
               <input type="search"
                 id="default-search"
+                value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                class="block w-full p-2 pl-5 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring focus:ring-orange-400 " placeholder="Search Products" />
+                class="block w-full py-2 pl-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring focus:ring-orange-400 " placeholder="Search Products" />
             </div>
           </div>
 

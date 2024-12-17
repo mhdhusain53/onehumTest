@@ -67,6 +67,10 @@ const Navbar = (props) => {
     const disCategory = [...new Set(arrayCategory)];
     console.log(disCategory)
 
+    const closeSidebar = () => {
+        setIsFilterVisible(false);
+    };
+
 
 
     return (
@@ -212,21 +216,54 @@ const Navbar = (props) => {
             {/* Filters Section (Full Height Below Navbar) */}
             {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-14 right-0 w-52 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300  h-full`}
+                className={`absolute top-14 mt-2 right-0 w-52 md:w-56 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300  h-full`}
 
             >
-                <h2 className="text-xl text-left pl-4 text-white  sidenavbar font-semibold mb-2 border-b shadow-sm">Categories</h2>
+                <button
+                    className="flex text-gray-600 hover:text-gray-800 focus:outline-none items-right mr-auto font-light  mb-1 pl-3 py-2" onClick={closeSidebar}
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="w-6 h-6 text-gray-600 opacity-70"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                    >
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M4 12h14M12 5l7 7-7 7"
+                        />
+                    </svg>
+                </button>
 
-                <div className=" px-4">
-                    <ul className="   text-center">
+                <div className="px-3 my-0 flex items-center ">
+
+
+                    <img
+                        src="/images/Categories.png"
+                        alt="Center Logo"
+                        className="h-8 w-8 bg-blue-100 p-1 ml-auto rounded-lg cursor-pointer inline align-middle"
+                    />
+
+                    <h2 className="text-xl text-left px-2 mr-auto text-gray-600 sidenavbar font-bold pb-1 inline align-middle">
+                        Categories
+                    </h2>
+                </div>
+
+
+
+                <div className=" px-3">
+                    <ul className=" text-center">
 
                         {
                             disCategory.map(cat => {
                                 return (
                                     <>
-                                        <li className="cursor-pointer text-left text-gray-400 font-medium text-lg mt-4">
+                                        <li className="cursor-pointer text-left text-gray-400 font-medium text-base mt-3">
                                             {cat} :
-                                            <ol className="text-left border-l-2 space-y-2 list-disc list-inside mt-2">
+                                            <ol className="text-left border-l-2 space-y-2 list-disc list-inside mt-1 ml-1">
                                                 {Cards_Data.filter((item) => {
                                                     var usr = UserAccess.find(
                                                         (user) => user.email.toLowerCase() === props.username.toLowerCase()
@@ -242,7 +279,7 @@ const Navbar = (props) => {
                                                         className="cursor-pointer hover:no-underline hover:decoration-gray-500"
                                                         to={`../${item.route}`}
                                                     >
-                                                        <li className="font-medium text-gray-500 text-base ml-4 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1 m-0">
+                                                        <li className="font-medium text-gray-500 text-sm ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
                                                             {item.title}
                                                         </li>
                                                     </Link>
