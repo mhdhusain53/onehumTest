@@ -142,7 +142,7 @@ const Content = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div
-          ref={sidebarRef} className="absolute h-full top-14 right-0 w-52 bg-white shadow-xl shadow-gray-600 flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
+          ref={sidebarRef} className="absolute h-full top-14 right-0 w-52 bg-white  shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
           id="sidenavbar">
 
           <button
@@ -191,15 +191,32 @@ const Content = () => {
             <span className="text-gray-600">Favorites</span>
           </label>
 
-          <h2 className="text-lg md:hidden font-semibold pt-3 mt-3 mb-1 text-gray-600">Categories:</h2>
+          {/* <h2 className="text-lg md:hidden font-semibold pt-3 mt-3  text-gray-600">Categories:</h2> */}
+
+          <div className=" my-0 flex mt-3 pt-4 border-t-2 md:hidden  ">
+                    <h2 className="text-lg  pr-2 pb-0.5 text-gray-600 sidenavbar font-semibold  inline align-middle">
+                        Categories
+                    </h2>
+
+                    <img
+                        src="/images/Categories.png"
+                        alt="Center Logo"
+                        className="h-8 w-8 bg-blue-100 p-1  rounded-lg cursor-pointer inline align-middle"
+                    />
+
+
+                </div>
+
+
+          <div className="border-2 bg-gray-50 border-gray-200 py-2 rounded-lg px-1 md:hidden">
 
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`md:hidden px-2 ml-1 w-100  py-1 my-0  border-l-2 border-gray-300 focus:outline-none  hover:shadow-2xl categoryhover shadow-black ${selectedCategory === category
+              className={` px-2  w-100  py-0.5 my-0 focus:outline-none  hover:shadow-2xl categoryhover shadow-black ${selectedCategory === category
                 ? ' ' // Style for the selected button
-                : 'bg-white text-gray-700'   // Style for the unselected buttons
+                : ' text-gray-700'   // Style for the unselected buttons
                 }`}
             >
               <span className={`text-base text-gray-500 font-semibold w-100 block text-left px-3  py-1 rounded-md ${selectedCategory === category
@@ -209,6 +226,7 @@ const Content = () => {
 
             </button>
           ))}
+          </div>
 
 
           {/* Search Box */}

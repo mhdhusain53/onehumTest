@@ -231,7 +231,7 @@ const Navbar = (props) => {
             {/* Filters Section (Full Height Below Navbar) */}
             {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-14 mt-2 right-0 w-52 md:w-56 bg-white shadow-xl shadow-gray-700 z-20  transform transition-all duration-300  h-full`}
+                className={`absolute top-14 mt-2 right-0 w-52 md:w-56 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg transform transition-all duration-300  h-full`}
 
             >
                 <button
