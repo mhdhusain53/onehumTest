@@ -231,11 +231,11 @@ const Navbar = (props) => {
             {/* Filters Section (Full Height Below Navbar) */}
             {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-14 mt-2 right-0 w-52 md:w-56 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg transform transition-all duration-300  h-full`}
+                className={`absolute top-14 mt-2 right-0 w-52 md:w-64 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg transform transition-all duration-300  h-full`}
 
             >
                 <button
-                    className="flex text-gray-600 hover:text-gray-800 focus:outline-none items-right mr-auto font-light  mb-1 pl-3 py-2" onClick={closeSidebar}
+                    className="flex text-gray-600 hover:text-gray-800 focus:outline-none items-right mr-auto font-light  mb-1 pl-3 py-2 pt-3" onClick={closeSidebar}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +254,7 @@ const Navbar = (props) => {
                 </button>
 
                 <div className="px-3 my-0 flex items-center ">
-                    <h2 className="text-xl text-left pr-2 pb-1 text-gray-600 sidenavbar font-bold  inline align-middle">
+                    <h2 className="text-xl 2xl:text-2xl text-left pr-2 pb-1 text-gray-600 sidenavbar font-bold  inline align-middle">
                         Categories
                     </h2>
 
@@ -309,20 +309,17 @@ const Navbar = (props) => {
                         } */}
 
 
-
-
-
 <>
             {disCategory.map((cat) => {
                 return (
-                    <li key={cat} className="cursor-pointer text-left text-gray-400 font-medium text-base mb-3">
+                    <li key={cat} className="cursor-pointer text-left text-gray-400 font-medium text-base 2xl:text-lg mb-3">
                         {/* Category name with a toggle for dropdown */}
                         <div
                             className="flex items-center justify-between"
                             onClick={() => toggleDropdown(cat)}
                         >
                             <span>{cat}:</span>
-                            <button className="ml-2 text-gray-500">
+                            <button className="ml-2 text-gray-500 xl:text-2xl focus:outline-none focus:ring-0">
                                 {openCategory === cat ? '−' : '+'}
                             </button>
                         </div>
@@ -346,7 +343,7 @@ const Navbar = (props) => {
                                         to={`../${item.route}`}
                                         onClick={closeSidebar}
                                     >
-                                        <li className="font-medium text-gray-500 text-sm ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
+                                        <li className="font-medium text-gray-500 text-sm 2xl:text-lg ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
                                             {item.title}
                                         </li>
                                     </Link>
