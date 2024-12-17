@@ -69,7 +69,22 @@ const Navbar = (props) => {
 
     const closeSidebar = () => {
         setIsFilterVisible(false);
+        setOpenCategory(null)
     };
+
+
+
+    const [openCategory, setOpenCategory] = useState(null);
+
+    // Function to toggle the dropdown
+    const toggleDropdown = (category) => {
+        setOpenCategory(openCategory === category ? null : category);
+    };
+
+
+
+
+
 
 
 
@@ -239,29 +254,29 @@ const Navbar = (props) => {
                 </button>
 
                 <div className="px-3 my-0 flex items-center ">
-
+                    <h2 className="text-xl text-left pr-2 pb-1 text-gray-600 sidenavbar font-bold  inline align-middle">
+                        Categories
+                    </h2>
 
                     <img
                         src="/images/Categories.png"
                         alt="Center Logo"
-                        className="h-8 w-8 bg-blue-100 p-1 ml-auto rounded-lg cursor-pointer inline align-middle"
+                        className="h-8 w-8 bg-blue-100 p-1  rounded-lg cursor-pointer inline align-middle"
                     />
 
-                    <h2 className="text-xl text-left px-2 mr-auto text-gray-600 sidenavbar font-bold pb-1 inline align-middle">
-                        Categories
-                    </h2>
+
                 </div>
 
 
 
-                <div className=" px-3">
+                <div className=" px-2 my-2 mx-3 border-2 bg-gray-50 border-gray-200 pt-2 rounded-lg">
                     <ul className=" text-center">
 
-                        {
+                        {/* {
                             disCategory.map(cat => {
                                 return (
                                     <>
-                                        <li className="cursor-pointer text-left text-gray-400 font-medium text-base mt-3">
+                                        <li className="cursor-pointer text-left text-gray-400 font-medium text-base mb-3">
                                             {cat} :
                                             <ol className="text-left border-l-2 space-y-2 list-disc list-inside mt-1 ml-1">
                                                 {Cards_Data.filter((item) => {
@@ -278,6 +293,7 @@ const Navbar = (props) => {
                                                         key={item.id}
                                                         className="cursor-pointer hover:no-underline hover:decoration-gray-500"
                                                         to={`../${item.route}`}
+                                                        onClick={closeSidebar}
                                                     >
                                                         <li className="font-medium text-gray-500 text-sm ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
                                                             {item.title}
@@ -290,7 +306,62 @@ const Navbar = (props) => {
                                     </>
                                 )
                             })
-                        }
+                        } */}
+
+
+
+
+
+<>
+            {disCategory.map((cat) => {
+                return (
+                    <li key={cat} className="cursor-pointer text-left text-gray-400 font-medium text-base mb-3">
+                        {/* Category name with a toggle for dropdown */}
+                        <div
+                            className="flex items-center justify-between"
+                            onClick={() => toggleDropdown(cat)}
+                        >
+                            <span>{cat}:</span>
+                            <button className="ml-2 text-gray-500">
+                                {openCategory === cat ? '−' : '+'}
+                            </button>
+                        </div>
+
+                        {/* Dropdown content */}
+                        {openCategory === cat && (
+                            <ol className="text-left border-l-2 space-y-2 list-disc list-inside mt-1 ml-1">
+                                {Cards_Data.filter((item) => {
+                                    var usr = UserAccess.find(
+                                        (user) => user.email.toLowerCase() === props.username.toLowerCase()
+                                    );
+                                    return usr
+                                        ? usr.pagesid.includes(item.id) &&
+                                        item.id !== props.val.id &&
+                                        item.category === cat
+                                        : false;
+                                }).map((item) => (
+                                    <Link
+                                        key={item.id}
+                                        className="cursor-pointer hover:no-underline hover:decoration-gray-500"
+                                        to={`../${item.route}`}
+                                        onClick={closeSidebar}
+                                    >
+                                        <li className="font-medium text-gray-500 text-sm ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
+                                            {item.title}
+                                        </li>
+                                    </Link>
+                                ))}
+                            </ol>
+                        )}
+                    </li>
+                );
+            })}
+        </>
+
+
+
+
+
 
                     </ul>
                 </div>
