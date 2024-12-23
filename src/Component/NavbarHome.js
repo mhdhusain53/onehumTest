@@ -48,31 +48,68 @@ const NavbarHome = (props) => {
       {/* Right Div */}
       <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base  z-50  w-32 sm:w-40  md:w-44 lg:w-56 " ref={boxRef}>
         {/* Welcome Text and Name */}
-        <p className="text-gray-300">
-          Welcome,
-          <span
-            onClick={toggleBox}
-            className="block cursor-pointer text-gray-100 hover:underline hover:decoration-gray-200"
-          >
-            {props.name}
-          </span>
-        </p>
+
+        <button className="border-2 rounded-full bg-white py-1 px-2 flex ml-auto justify- items-center user"
+          onClick={toggleBox}>
+
+          <img src="./images/User2.png" className="w-8 h-6 mx-auto pr-2" />
+
+          {!isBoxVisible ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="8 4 16 12 8 20"></polyline>
+          </svg>
+            :
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 8 12 16 20 8"></polyline>
+            </svg>
+          }
+
+        </button>
+
 
         {/* Hidden Box */}
-       {isBoxVisible&&( <div
-           className={`absolute right-2 mt-2 bg-white shadow-md rounded-lg w-32 md:w-40  hover:bg-gray-100
+        {isBoxVisible && (<div
+          className={`absolute -right-3 mt-2 bg-white shadow-md rounded-lg w-40 md:w-44  hover:bg-gray-100 p-2
             }`}
           id="signoutbox"
         >
+          <p className="text-gray-400 font-semibold text-sm text-center bg-gray-100 rounded-lg py-1.5 px-1.5">
+            Welcome
+            <span
+              className="block font-normal text-sm cursor-pointer text-gray-600 "
+            >
+              {props.name}
+            </span>
+          </p>
+
+          <hr  className="text-gray-400 my-2 mb-3 border-t-1 border-gray-400"/>
+
+          <button
+            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+          >
+            <img src="./images/Account.png"  className="w-5 h-5"/>
+            <span className="ml-1">Account</span>
+            
+          </button>
+
+          <button
+            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+          >
+            <img src="./images/Setting.png"  className="w-5 h-5"/>
+            <span className="ml-1">Setting</span>
+            
+          </button>
+
           <button
             onClick={() => props.logout()}
-            className="block w-full px-2 py-2 text-left text-xs sm:text-sm md:text-base rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500"
+            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
           >
-            Sign Out
+            <img src="./images/SignOut.png"  className="w-5 h-4"/>
+            <span className="ml-1">Sign Out</span>
+            
           </button>
         </div>)}
       </div>
-     
+
     </nav>
   );
 };

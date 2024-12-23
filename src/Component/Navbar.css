@@ -1,17 +1,33 @@
 .navbar{
     /* background: linear-gradient(90deg,#69BE33 , #0B8ECD) !important; */
-    background: linear-gradient(to right, #0E2954,#0E2954);
-    padding: 5px 20px !important;
-    z-index: 100;
+    background: linear-gradient(to right, #2E8A99, #4fa4b1,#2E8A99, #4fa4b1, #2E8A99);
+    padding: 8px 20px;
+    padding-bottom: 35px;
+    z-index: 10 !important;
 }
-/* .sidenavbar{
+.subnav2{
 
-    background: #1F6E8C;
-    padding: 9px 0;;
-} */
+    background-color: #FFEEA9;
+    border: solid 2px #fdcf97;
+    
+  
+    position: relative !important;
+    z-index: 10 !important;
+}
+#signoutbox{
+    z-index: 100 !important;
+}
+
+.darkOrange{
+    color: #EF7701;
+}.darkOrange:hover{
+    color: #EF7701;
+}
+
 
 .btnn:hover{
-    background-color: #1F6E8C !important;
+    transform: scale(1.2);
+
 }
 .nav-img{
     width: 14% ;

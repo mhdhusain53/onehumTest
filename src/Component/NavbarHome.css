@@ -8,8 +8,12 @@
 
 
     /* background-color: #FFBF78; */
-    background: #0E2954;
+    background: linear-gradient(to right, #2E8A99, #4fa4b1,#2E8A99, #4fa4b1, #2E8A99);
+    /* background: linear-gradient(to right, #A3D1DB, #D4EBEF,#A3D1DB, #D4EBEF, #A3D1DB); blue */
+    /* background: linear-gradient(to right, #76B876, #b9e0b9,#76B876, #b9e0b9, #76B876); */
+    /* background: linear-gradient(to right, #86A886, #76B876);  both green gradient*/
     padding: 8px 20px;
+    padding-bottom: 43px;
     z-index: 10 !important;
 }
 
@@ -25,21 +29,42 @@
 }
 
 .categorybtn{
-    border-left: #2E8A99 1px solid;
+    border: #fdcf97 2px solid;
+}
+.darkborder{
+  color: #EF7701;
 }
 
-
 .categorybtn:hover{
-    transform: scale(1.04);
+    /* transform: scale(1.04); */
     border: #EF7701 2px solid;
 }
 
 .subnav{
-    /* background-color: #FFEEA9; */
-    background: linear-gradient(to right, #2E8A99, #2E8A99);
+    /* background-color: #ecf2f3;
+    border: solid 2px #A3D1DB;  blue*/
+    /* background: linear-gradient(to right, #2E8A99, #2E8A99); */
+    /* background-color: #b9e0b9;
+    border: solid 2px #76B876; green */
+    /* background-color: #fce7cd; orange*/
+    background-color: #FFEEA9;
+    border: solid 2px #fdcf97;
+    
   
     position: relative !important;
     z-index: 0 !important;
+}
+
+.serachborder{
+    border: solid 2px #fdcf97 !important;
+    background-color: white;
+}
+.serachborder:focus{
+    border: solid 2px #fce7cd !important;
+}
+.bgunselect{
+    background-color: white;
+    /* background-color: #a8d4a8; */
 }
 
 #signoutbox{
@@ -52,3 +77,73 @@
 z-index: -1 !important;
     
 }
+
+.user{
+  border: solid 2px #EF7701;
+}
+
+.user:hover{
+  transform:  scale(1.05);
+}
+
+.user:focus {
+  outline: none; /* Remove the default focus outline */
+  box-shadow: 0 0 0 1px orange; /* Add an orange focus ring */
+}
+
+@keyframes scaleEffect {
+  0% {
+    transform: scale(1); /* Original size */
+  }
+  50% {
+    transform: scale(0.85); /* Slightly smaller */
+  }
+  100% {
+    transform: scale(1.1); /* Slightly larger */
+  }
+}
+
+.user img {
+  transition: transform 0.5s ease-in-out;
+}
+
+.user:hover img {
+  animation: scaleEffect 0.5s ease-in-out;
+}
+
+
+
+
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-fadeInLeft {
+    animation: fadeInLeft 0.5s ease-in-out;
+  }
+
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate-fadeInRight {
+    animation: fadeInRight 0.5s ease-in-out;
+  }
+
+
+  

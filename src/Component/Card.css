@@ -5,7 +5,7 @@
     top: 18%;
     left: 0;
     right: 0;
-    height: 65%;
+    height: 63%;
     overflow-y: auto;
     padding: 10px;
     display: flex;
@@ -37,13 +37,13 @@
     border: 3px solid transparent;
     transition: all 0.5s ease-in-out;
 }
-
+/* 86A886 */
 
 
 .card:hover {
     transform: translateY(0) scale(1.075) translateZ(0);
 
-    box-shadow: inset  0 -600px 0 -1px #2E8A99, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: inset  0 -600px 0 -1px #2E8A99   , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 3px solid #fff;
     /* box-shadow: inset 0 -35px 0 -1px #e98324, 0 6px 20px rgba(0, 0, 0, 0.19); */
 } 
@@ -122,6 +122,16 @@
     right: 0;
     bottom: 0;
     z-index: 1;
+  }
+
+  .editbutton{
+    z-index: 10;
+  }
+
+  .editbutton:hover{
+    
+    background-color: #EF7701 !important;
+    /* background-color: #51b0be !important; */
   }
 
 
@@ -215,6 +225,30 @@
     
    
 }
+
+.hover-animation {
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .group:hover .hover-animation {
+    transform:  scale(1.1);
+    animation: shrinkGrow 0.5s ease-in-out;
+  }
+  
+  @keyframes shrinkGrow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  
+
 
 
 .card-all::-webkit-scrollbar {

@@ -101,31 +101,66 @@ const Navbar = (props) => {
                 </Link>
 
                 {/* Right Div */}
-                <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base  z-50  w-32 sm:w-40  md:w-44 lg:w-56 " ref={boxRef}>
+                <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base my-1.5 z-0  w-32 sm:w-40  md:w-44 lg:w-56 " ref={boxRef}>
                     {/* Welcome Text and Name */}
-                    <p className="text-gray-300">
-                        Welcome,
-                        <span
-                            onClick={toggleBox}
-                            className="block cursor-pointer text-gray-100 hover:underline hover:decoration-gray-200"
-                        >
-                            {props.name}
-                        </span>
-                    </p>
+                    <button className="border-2 rounded-full bg-white py-1 px-2 flex ml-auto justify- items-center user"
+                        onClick={toggleBox}>
+
+                        <img src="./images/User2.png" className="w-8 h-6 mx-auto pr-2" />
+
+                        {!isBoxVisible ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="8 4 16 12 8 20"></polyline>
+                        </svg>
+                            :
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="4 8 12 16 20 8"></polyline>
+                            </svg>
+                        }
+
+                    </button>
 
                     {/* Hidden Box */}
-                    {isBoxVisible && (<div
-                        className={`absolute right-2 mt-2 bg-white shadow-md rounded-lg w-32 md:w-40  hover:bg-gray-100
+                    {/* {isBoxVisible && (<div
+                        className={`absolute -right-3 mt-2 bg-white shadow-md rounded-lg w-40 md:w-44  hover:bg-gray-100 p-2 z-100
             }`}
                         id="signoutbox"
                     >
+                        <p className="text-gray-400 font-semibold text-sm text-center bg-gray-100 rounded-lg py-1.5 px-1.5">
+                            Welcome
+                            <span
+                                className="block font-normal text-sm cursor-pointer text-gray-600 "
+                            >
+                                {props.name}
+                            </span>
+                        </p>
+
+                        <hr className="text-gray-400 my-2 mb-3 border-t-1 border-gray-400" />
+
+                        <button
+                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+                        >
+                            <img src="./images/Account.png" className="w-5 h-5" />
+                            <span className="ml-1">Account</span>
+
+                        </button>
+
+                        <button
+                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+                        >
+                            <img src="./images/Setting.png" className="w-5 h-5" />
+                            <span className="ml-1">Setting</span>
+
+                        </button>
+
                         <button
                             onClick={() => props.logout()}
-                            className="block w-full px-2 py-2 text-left text-xs sm:text-sm md:text-base rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500"
+                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
                         >
-                            Sign Out
+                            <img src="./images/SignOut.png" className="w-5 h-4" />
+                            <span className="ml-1">Sign Out</span>
+
                         </button>
-                    </div>)}
+                    </div>)} */}
                 </div>
 
 
@@ -161,30 +196,30 @@ const Navbar = (props) => {
             {/* Side Navbar */}
 
 
-            <div className="subnav border-b shadow-sm pl-4 md:pl-8">
+            <div className="subnav2 absolute -top-8 z-50 border-b shadow-sm mx-28 pl-4 md:pl-8 py-1 rounded-lg">
                 {/* Desktop View */}
-                <div className="flex items-center justify-end xl:justify-between py-1">
+                <div className="flex  items-center justify-end xl:justify-between py-1">
                     {/* Buttons A, B, C */}
                     <div className="hidden xl:flex items-center space-x-4">
 
-                        <button className="   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-100 hover:text-gray-100">
-                            <Link className="hover:decoration-gray-100 hover:text-gray-100" to="../home">
+                        <button className="   cursor-pointer darkOrange hover:underline hover:decoration-gray-100 hover:text-gray-100">
+                            <Link className="hover:decoration-gray-100 darkOrange" to="../home">
                                 Products
                             </Link>
                         </button>
 
-                        <h2 className="text-xl font-bold text-gray-100 mb-1"> {`>`} </h2>
+                        <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className="   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-500 ">
-                            <Link className="hover:decoration-gray-100 hover:text-gray-100" to="../home">
+                        <button className="   cursor-pointer darkOrange0 hover:underline hover:decoration-gray-500 ">
+                            <Link className="hover:decoration-gray-100 darkOrange" to="../home">
                                 {props.val.category}
                             </Link>
 
                         </button>
 
-                        <h2 className="text-xl font-bold text-gray-100 mb-1"> {`>`} </h2>
+                        <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className=" cursor-pointer text-gray-100 underline decoration-gray-200 hover:decoration-gray-100 hover:text-gray-100">
+                        <button className=" cursor-pointer darkOrange underline decoration-orange-200 hover:decoration-orange-400 darkOrange">
                             {props.val.title}
                         </button>
 
@@ -195,9 +230,9 @@ const Navbar = (props) => {
                             })
                             .map((item) => (
                                 <>
-                                    <h2 className="text-xl mb-1 text-gray-200 font-semibold"> {`|`} </h2>
-                                    <button className="   cursor-pointer text-gray-100 hover:underline hover:decoration-gray-100 ">
-                                        <Link className="hover:decoration-gray-100 hover:text-gray-100" to={`../${item.route}`}>
+                                    <h2 className="text-xl mb-1 darkOrange font-semibold"> {`|`} </h2>
+                                    <button className="   cursor-pointer darkOrange hover:underline hover:decoration-gray-100 ">
+                                        <Link className="hover:decoration-gray-100 darkOrange0" to={`../${item.route}`}>
                                             {item.title}
                                         </Link>
 
@@ -207,7 +242,7 @@ const Navbar = (props) => {
 
                     </div>
 
-                    <h2 className="md:absolute text-white pb-1 title text-left md:text-center flex-1 text-xl sm:text-2xl md:text-3xl font-bold md:left-1/2 md:-translate-x-1/2">
+                    <h2 className="md:absolute darkOrange pb-1 title text-left md:text-center flex-1 text-xl sm:text-2xl md:text-3xl font-bold md:left-1/2 md:-translate-x-1/2">
                         {props.val.title}
                     </h2>
 
@@ -217,7 +252,7 @@ const Navbar = (props) => {
 
                         <button
                             onClick={toggleFilter}
-                            className="px-4 py-2 text-xl text-gray-100 hover:text-gray-800 btnn rounded-md "
+                            className="px-4 py-2 text-xl darkOrange btnn rounded-md "
                         >
                             <FaBars />
                         </button>
@@ -272,12 +307,26 @@ const Navbar = (props) => {
                 <div className=" px-2 my-2 mx-3 border-2 bg-gray-50 border-gray-200 pt-2 rounded-lg">
                     <ul className=" text-center">
 
-                        {/* {
-                            disCategory.map(cat => {
+                       
+
+
+                        <>
+                            {disCategory.map((cat) => {
                                 return (
-                                    <>
-                                        <li className="cursor-pointer text-left text-gray-400 font-medium text-base mb-3">
-                                            {cat} :
+                                    <li key={cat} className="cursor-pointer text-left text-gray-400 font-medium text-base 2xl:text-lg mb-3">
+                                        {/* Category name with a toggle for dropdown */}
+                                        <div
+                                            className="flex items-center justify-between"
+                                            onClick={() => toggleDropdown(cat)}
+                                        >
+                                            <span>{cat}:</span>
+                                            <button className="ml-2 text-gray-500 xl:text-2xl focus:outline-none focus:ring-0">
+                                                {openCategory === cat ? '−' : '+'}
+                                            </button>
+                                        </div>
+
+                                        {/* Dropdown content */}
+                                        {openCategory === cat && (
                                             <ol className="text-left border-l-2 space-y-2 list-disc list-inside mt-1 ml-1">
                                                 {Cards_Data.filter((item) => {
                                                     var usr = UserAccess.find(
@@ -295,65 +344,17 @@ const Navbar = (props) => {
                                                         to={`../${item.route}`}
                                                         onClick={closeSidebar}
                                                     >
-                                                        <li className="font-medium text-gray-500 text-sm ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
+                                                        <li className="font-medium text-gray-500 text-sm 2xl:text-lg ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
                                                             {item.title}
                                                         </li>
                                                     </Link>
                                                 ))}
                                             </ol>
-                                        </li>
-
-                                    </>
-                                )
-                            })
-                        } */}
-
-
-<>
-            {disCategory.map((cat) => {
-                return (
-                    <li key={cat} className="cursor-pointer text-left text-gray-400 font-medium text-base 2xl:text-lg mb-3">
-                        {/* Category name with a toggle for dropdown */}
-                        <div
-                            className="flex items-center justify-between"
-                            onClick={() => toggleDropdown(cat)}
-                        >
-                            <span>{cat}:</span>
-                            <button className="ml-2 text-gray-500 xl:text-2xl focus:outline-none focus:ring-0">
-                                {openCategory === cat ? '−' : '+'}
-                            </button>
-                        </div>
-
-                        {/* Dropdown content */}
-                        {openCategory === cat && (
-                            <ol className="text-left border-l-2 space-y-2 list-disc list-inside mt-1 ml-1">
-                                {Cards_Data.filter((item) => {
-                                    var usr = UserAccess.find(
-                                        (user) => user.email.toLowerCase() === props.username.toLowerCase()
-                                    );
-                                    return usr
-                                        ? usr.pagesid.includes(item.id) &&
-                                        item.id !== props.val.id &&
-                                        item.category === cat
-                                        : false;
-                                }).map((item) => (
-                                    <Link
-                                        key={item.id}
-                                        className="cursor-pointer hover:no-underline hover:decoration-gray-500"
-                                        to={`../${item.route}`}
-                                        onClick={closeSidebar}
-                                    >
-                                        <li className="font-medium text-gray-500 text-sm 2xl:text-lg ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
-                                            {item.title}
-                                        </li>
-                                    </Link>
-                                ))}
-                            </ol>
-                        )}
-                    </li>
-                );
-            })}
-        </>
+                                        )}
+                                    </li>
+                                );
+                            })}
+                        </>
 
 
 
@@ -363,6 +364,48 @@ const Navbar = (props) => {
                     </ul>
                 </div>
             </div>)}
+
+            {isBoxVisible && (<div
+                        className={`absolute right-2 top-14 bg-white shadow-md rounded-lg w-40 md:w-44  hover:bg-gray-100 p-2 z-100
+            }`}
+                        id="signoutbox"
+                    >
+                        <p className="text-gray-400 font-semibold text-sm text-center bg-gray-100 rounded-lg py-1.5 px-1.5">
+                            Welcome
+                            <span
+                                className="block font-normal text-sm cursor-pointer text-gray-600 "
+                            >
+                                {props.name}
+                            </span>
+                        </p>
+
+                        <hr className="text-gray-400 my-2 mb-3 border-t-1 border-gray-400" />
+
+                        <button
+                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+                        >
+                            <img src="./images/Account.png" className="w-5 h-5" />
+                            <span className="ml-1">Account</span>
+
+                        </button>
+
+                        <button
+                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+                        >
+                            <img src="./images/Setting.png" className="w-5 h-5" />
+                            <span className="ml-1">Setting</span>
+
+                        </button>
+
+                        <button
+                            onClick={() => props.logout()}
+                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
+                        >
+                            <img src="./images/SignOut.png" className="w-5 h-4" />
+                            <span className="ml-1">Sign Out</span>
+
+                        </button>
+                    </div>)}
         </div >
     );
 };

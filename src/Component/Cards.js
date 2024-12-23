@@ -79,7 +79,7 @@ function Cards(props) {
     return (
         <div className="z-0">
             
-            <div className="card-all z-0">
+            <div className="card-all z-0 ">
 
 
                 {serachFilteredCards.length > 0 ? (

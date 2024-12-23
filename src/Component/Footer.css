@@ -2,17 +2,17 @@
     position: fixed;
     bottom: 0;
     /* background: linear-gradient(90deg,#69BE33 , #0B8ECD) !important; */
-    background: linear-gradient(to right, #0E2954,#0E2954) !important;
+    background: linear-gradient(to right, #2E8A99, #4fa4b1,#2E8A99, #4fa4b1, #2E8A99);
     
     width: 100%;
-    padding: 2px 2%;
+    padding: 3px 2%;
     font-size: 13px;
     font-weight: 400;
 }
 
 .flogo{
-    max-height: 45px ;
-    max-width: 15%;
+    max-height: 40px ;
+    max-width: 13%;
 
 }
 

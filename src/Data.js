@@ -78,6 +78,16 @@ var Cards_Data=[
         access:"",
         route:"tab"
     }, 
+    {
+        id: 9,
+        title:"tab",
+        tagline: "Business Intelligence",
+        category: "Performance",
+        image: "/images/Pulse.png",
+        link: "https://prod-useast-a.online.tableau.com/t/acuitas360/views/PULSE2_0vHQ_RD0_2rk/ExecutiveSummary?:embed=y&:showVizHome=no",
+        access:"",
+        route:"tab"
+    }, 
 ]
 
 export default Cards_Data;
