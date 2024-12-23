@@ -29,7 +29,7 @@
 }
 
 .categorybtn{
-    border: #fdcf97 2px solid;
+    border: #b9e0b9 2px solid;
 }
 .darkborder{
   color: #EF7701;
@@ -44,11 +44,15 @@
     /* background-color: #ecf2f3;
     border: solid 2px #A3D1DB;  blue*/
     /* background: linear-gradient(to right, #2E8A99, #2E8A99); */
-    /* background-color: #b9e0b9;
-    border: solid 2px #76B876; green */
+    background: linear-gradient(to right, #b9e0b9,#c6e7c6,#b9e0b9, #c6e7c6,#b9e0b9); 
+    /* background-color: #b9e0b9; */
+    /* border: solid 2px #76B876;  */
     /* background-color: #fce7cd; orange*/
-    background-color: #FFEEA9;
-    border: solid 2px #fdcf97;
+    /* background-color: #FFEEA9;
+    border: solid 2px #fdcf97; */
+    /* background-color: #E6F7F9 !important;
+    border: solid 2px #79BEC8; */
+background: linear-gradient(to right, #A3D1DB, #B3E0E6, #A3D1DB, #B3E0E6, #A3D1DB);
     
   
     position: relative !important;
@@ -56,7 +60,7 @@
 }
 
 .serachborder{
-    border: solid 2px #fdcf97 !important;
+    border: solid 2px #b9e0b9 !important;
     background-color: white;
 }
 .serachborder:focus{

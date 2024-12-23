@@ -1,14 +1,16 @@
 .navbar{
     /* background: linear-gradient(90deg,#69BE33 , #0B8ECD) !important; */
     background: linear-gradient(to right, #2E8A99, #4fa4b1,#2E8A99, #4fa4b1, #2E8A99);
+    
     padding: 8px 20px;
     padding-bottom: 35px;
     z-index: 10 !important;
 }
 .subnav2{
 
-    background-color: #FFEEA9;
-    border: solid 2px #fdcf97;
+    background: linear-gradient(to right, #b9e0b9,#c6e7c6,#b9e0b9, #c6e7c6,#b9e0b9);
+
+    /* border: solid 2px #fdcf97; */
     
   
     position: relative !important;
