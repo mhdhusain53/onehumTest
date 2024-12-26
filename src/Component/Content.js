@@ -240,7 +240,7 @@ const Content = () => {
       {
         isMenuOpen && (
           <div
-            ref={sidebarRef} className="absolute h-full top-14 right-0 w-52 bg-white  shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
+            ref={sidebarRef} className="absolute h-full top-12 right-0 w-52 bg-white  shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
             id="sidenavbar">
 
             <button
@@ -252,7 +252,7 @@ const Content = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.3"
               >
                 <path
                   strokeLinecap="round"
@@ -318,7 +318,7 @@ const Content = () => {
                     }`}
                 >
                   <span className={`text-base text-gray-500 font-semibold w-100 block text-left px-3  py-1 rounded-md ${selectedCategory === category
-                    ? 'bg-gray-200 text-gray-600' // Style for the selected button
+                    ? 'bg-gray-200 text-orange-500' // Style for the selected button
                     : 'hover:bg-gray-100'   // Style for the unselected buttons
                     }`}>{` ${category}`}</span>
 

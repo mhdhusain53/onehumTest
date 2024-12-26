@@ -194,15 +194,13 @@ const Navbar = (props) => {
             </nav>
 
             {/* Side Navbar */}
-
-
-            <div className="subnav2 md:absolute md:-top-8 z-50 md:shadow-sm md:mx-28 mx-2 md:pl-4 px-2 md:pl-8 md:py-1 md:rounded-lg">
+            <div className="subnav2 md:absolute md:-top-8 z-50 md:shadow-sm md:mx-28   px-2  md:py-1 md:rounded-lg">
                 {/* Desktop View */}
                 <div className="flex  items-center justify-end xl:justify-between py-1">
                     {/* Buttons A, B, C */}
                     <div className="hidden xl:flex items-center space-x-4">
 
-                        <button className="   cursor-pointer darkOrange hover:underline hover:decoration-orange-400 ">
+                        <button className="  pl-4 cursor-pointer darkOrange hover:underline hover:decoration-orange-400 ">
                             <Link className="hover:decoration-orange-400 darkOrange" to="../home">
                                 Products
                             </Link>
@@ -267,7 +265,7 @@ const Navbar = (props) => {
             {/* Filters Section (Full Height Below Navbar) */}
             {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-14 mt-2 right-0 w-52 md:w-64 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg transform transition-all duration-300  h-full`}
+                className={`absolute top-12 mt-2 right-0 w-52 md:w-64 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg transform transition-all duration-300  h-full`}
 
             >
                 <button
