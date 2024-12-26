@@ -132,7 +132,7 @@ const Content = () => {
                   {/* Search Icon */}
                   <label
                     htmlFor="default-search"
-                    className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+                    className="mb-2 text-sm font-medium text-gray-900 sr-only "
                   >
                     Search
                   </label>
@@ -240,7 +240,7 @@ const Content = () => {
       {
         isMenuOpen && (
           <div
-            ref={sidebarRef} className="absolute h-full top-12 right-0 w-52 bg-white  shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
+            ref={sidebarRef} className="absolute h-full top-12 right-0 w-52 bg-gray-50  shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
             id="sidenavbar">
 
             <button
@@ -267,7 +267,7 @@ const Content = () => {
               <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
               <div class="relative">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                  <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                  <svg class="w-5 h-5 darkborder " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                   </svg>
                 </div>
@@ -275,7 +275,29 @@ const Content = () => {
                   id="default-search"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  class="block w-full py-2 pl-10 text-base text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:ring focus:ring-orange-400 " placeholder="Search Products" />
+                  class=" serachborder block w-full py-2 pl-10 text-base text-gray-900 border rounded-lg bg-gray-50 focus:outline-none focus:ring focus:ring-orange-400 " placeholder="Search Products" />
+                {searchQuery && (
+                  <div
+                    onClick={() => setSearchQuery('')}
+                    className="absolute inset-y-0 end-0 flex items-center pe-3 cursor-pointer"
+                  >
+                    <svg
+                      className="w-6 h-6 darkborder"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 6L14 14M6 14L14 6"
+                      />
+                    </svg>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -291,7 +313,7 @@ const Content = () => {
 
             {/* <h2 className="text-lg md:hidden font-semibold pt-3 mt-3  text-gray-600">Categories:</h2> */}
 
-            <div className=" my-0 flex mt-3 pt-4 border-t-2 md:hidden  ">
+            <div className=" my-0 flex mt-3 pt-4  border-t-2 md:hidden  ">
               <h2 className="text-lg  pr-2 pb-0.5 text-gray-600 sidenavbar font-semibold  inline align-middle">
                 Categories
               </h2>

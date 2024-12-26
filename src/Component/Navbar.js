@@ -18,7 +18,12 @@ const Navbar = (props) => {
     // Close the box when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (boxRef.current && !boxRef.current.contains(event.target)) {
+            if (
+                boxRef.current &&
+                !boxRef.current.contains(event.target) &&
+                menuButtonRef.current &&
+                !menuButtonRef.current.contains(event.target)
+            ) {
                 setIsBoxVisible(false);
             }
         };
@@ -104,7 +109,7 @@ const Navbar = (props) => {
                 <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base my-1.5 z-0  w-32 sm:w-40  md:w-44 lg:w-56 " >
                     {/* Welcome Text and Name */}
                     <button className="border-2 rounded-full bg-white py-1.5 px-2 flex ml-auto justify- items-center user"
-                        onClick={toggleBox} ref={boxRef}>
+                        onClick={toggleBox}  ref={menuButtonRef}>
 
                         <img src="./images/User2.png" className="w-7 h-5 mx-auto pr-2" />
 
@@ -367,6 +372,7 @@ const Navbar = (props) => {
             {isBoxVisible && (<div
                         className={`absolute right-2 top-14 bg-white shadow-md rounded-lg w-40 md:w-44  hover:bg-gray-100 p-2 z-100
             }`}
+            ref={boxRef}
                         id="signoutbox"
                     >
                         <p className="text-gray-400 font-semibold text-sm text-center bg-gray-100 rounded-lg py-1.5 px-1.5">

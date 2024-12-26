@@ -68,26 +68,7 @@ var Cards_Data=[
         link: "https://app.powerbi.com/reportEmbed?reportId=78252a05-9ea1-4ce4-a00e-e4ebc125ed87&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
         access:"",
         route:"Pulse"
-    }, {
-        id: 8,
-        title:"tab",
-        tagline: "Business Intelligence",
-        category: "Performance",
-        image: "/images/Pulse.png",
-        link: "https://prod-useast-a.online.tableau.com/t/acuitas360/views/PULSE2_0vHQ_RD0_2rk/ExecutiveSummary?:embed=y&:showVizHome=no",
-        access:"",
-        route:"tab"
-    }, 
-    {
-        id: 9,
-        title:"tab",
-        tagline: "Business Intelligence",
-        category: "Performance",
-        image: "/images/Pulse.png",
-        link: "https://prod-useast-a.online.tableau.com/t/acuitas360/views/PULSE2_0vHQ_RD0_2rk/ExecutiveSummary?:embed=y&:showVizHome=no",
-        access:"",
-        route:"tab"
-    }, 
+    },
 ]
 
 export default Cards_Data;
