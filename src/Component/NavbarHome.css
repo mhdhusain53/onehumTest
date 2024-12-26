@@ -99,6 +99,15 @@ z-index: -1 !important;
   box-shadow: 0 0 0 1px orange; /* Add an orange focus ring */
 }
 
+@media (max-width: 768px) {
+  .subnav{
+    background: transparent !important;
+
+    border: none;
+    
+}
+}
+
 @keyframes scaleEffect {
   0% {
     transform: scale(1); /* Original size */

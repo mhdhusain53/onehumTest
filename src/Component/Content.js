@@ -54,13 +54,13 @@ const Content = () => {
 
       <div className="h-screen flex flex-col overflow-visible content " >
         {/* Sub-navbar */}
-        <div className="subnav absolute -top-10 z-50 border-b shadow-sm px-2 mt-2 mx-28 rounded-lg">
+        <div className="subnav md:absolute md:-top-10 z-50  md:shadow-sm px-2 md:mt-2 md:mx-28 md:rounded-lg">
           {/* Desktop View */}
           <div className="flex items-center  justify-between  py-2 pr-3 ">
 
             <div className=" md:hidden  flex-shrink-0 h-auto w-32 sm:w-40  md:w-44 lg:w-56 ">
               <img
-                src="/images/CompanyLogo.png"
+                src="/images/companylogodark.png"
                 alt="Left Logo"
                 className="h-8 sm:h-10 lg:h-12 xl:h-14 cursor-pointer"
               />

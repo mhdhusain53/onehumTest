@@ -196,7 +196,7 @@ const Navbar = (props) => {
             {/* Side Navbar */}
 
 
-            <div className="subnav2 absolute -top-8 z-50 border-b shadow-sm mx-28 pl-4 md:pl-8 py-1 rounded-lg">
+            <div className="subnav2 md:absolute md:-top-8 z-50 md:shadow-sm md:mx-28 mx-2 md:pl-4 px-2 md:pl-8 md:py-1 md:rounded-lg">
                 {/* Desktop View */}
                 <div className="flex  items-center justify-end xl:justify-between py-1">
                     {/* Buttons A, B, C */}
@@ -243,17 +243,17 @@ const Navbar = (props) => {
 
                     </div>
 
-                    <h2 className="md:absolute darkOrange pb-1 title text-left md:text-center flex-1 text-xl sm:text-2xl md:text-3xl font-bold md:left-1/2 md:-translate-x-1/2">
+                    <h2 className="absolute darkOrange pb-1 title text-center flex-1 text-xl sm:text-2xl md:text-3xl font-bold left-1/2 -translate-x-1/2">
                         {props.val.title}
                     </h2>
 
 
                     {/* Right Side: Search and Buttons */}
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-right md:items-center  space-x-4">
 
                         <button
                             onClick={toggleFilter}
-                            className="px-4 py-2 text-xl text-orange-500 focus:border-0 btnn rounded-md "
+                            className="md:px-4 py-2 text-xl text-orange-500 focus:border-0 btnn rounded-md "
                         >
                             <FaBars />
                         </button>

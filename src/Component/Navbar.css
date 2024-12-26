@@ -38,7 +38,7 @@
     outline: none;
   }
 
-  
+
 .nav-img{
     width: 14% ;
     
@@ -54,7 +54,14 @@
     .nav-image{
         width: 100%;
     }
+    .subnav2{
+        background: transparent !important;
+    
+        border: none;
+        
+    }
 }
+
 
 .highz{
     z-index: 9999;
