@@ -6,6 +6,8 @@ body {
   overflow: hidden;
   /* background-color: #f3f3f3 !important; */
   background: linear-gradient(to right, #eef4ee,#f5f8f5,#eef4ee, #f5f8f5,#eef4ee);
+  /* background: linear-gradient(to right, #2E8A99, #4fa4b1,#2E8A99, #4fa4b1, #2E8A99); */
+
   
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

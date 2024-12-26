@@ -46,13 +46,13 @@ const NavbarHome = (props) => {
       </div>
 
       {/* Right Div */}
-      <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base  z-50  w-32 sm:w-40  md:w-44 lg:w-56 " ref={boxRef}>
+      <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base  z-50  w-32 sm:w-40  md:w-44 lg:w-56 " >
         {/* Welcome Text and Name */}
 
-        <button className="border-2 rounded-full bg-white py-1 px-2 flex ml-auto justify- items-center user"
-          onClick={toggleBox}>
+        <button className="border-2 rounded-full bg-white py-1.5 px-2 flex ml-auto justify- items-center user"
+          ref={boxRef} onClick={toggleBox}>
 
-          <img src="./images/User2.png" className="w-8 h-6 mx-auto pr-2" />
+          <img src="./images/User2.png" className="w-7 h-5 mx-auto pr-2" />
 
           {!isBoxVisible ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="8 4 16 12 8 20"></polyline>

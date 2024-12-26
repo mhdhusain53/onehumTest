@@ -26,10 +26,12 @@
 }
 .selectcategorybg{
     background-color: #EF7701 ;
+    
+  border: #EF7701 2px solid !important;
 }
 
 .categorybtn{
-    border: #b9e0b9 2px solid;
+    border: #B3E0E6 2px solid;
 }
 .darkborder{
   color: #EF7701;
@@ -44,7 +46,7 @@
     /* background-color: #ecf2f3;
     border: solid 2px #A3D1DB;  blue*/
     /* background: linear-gradient(to right, #2E8A99, #2E8A99); */
-    background: linear-gradient(to right, #b9e0b9,#c6e7c6,#b9e0b9, #c6e7c6,#b9e0b9); 
+    /* background: linear-gradient(to right, #b9e0b9,#c6e7c6,#b9e0b9, #c6e7c6,#b9e0b9);  */
     /* background-color: #b9e0b9; */
     /* border: solid 2px #76B876;  */
     /* background-color: #fce7cd; orange*/
@@ -52,15 +54,17 @@
     border: solid 2px #fdcf97; */
     /* background-color: #E6F7F9 !important;
     border: solid 2px #79BEC8; */
-background: linear-gradient(to right, #A3D1DB, #B3E0E6, #A3D1DB, #B3E0E6, #A3D1DB);
+/* background: linear-gradient(to right, #A3D1DB, #B3E0E6, #A3D1DB, #B3E0E6, #A3D1DB); */
+    background-color: rgb(250, 250, 250);
+    background: linear-gradient(to right, rgb(250, 250, 250), rgb(247, 247, 247), rgb(250, 250, 250), rgb(247, 247, 247), rgb(250, 250, 250)); 
     
   
     position: relative !important;
-    z-index: 0 !important;
+    z-index: 10 !important;
 }
 
 .serachborder{
-    border: solid 2px #b9e0b9 !important;
+    border: solid 2px #B3E0E6 !important;
     background-color: white;
 }
 .serachborder:focus{

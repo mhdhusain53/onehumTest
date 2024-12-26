@@ -219,7 +219,7 @@ const Content = () => {
 
             <div className="flex lg:hidden justify-end items-right p-2">
               <FaBars
-                className="text-gray-600 hover:text-gray-800 btnn rounded-md text-2xl cursor-pointer"
+                className="text-orange-500 btnn rounded-md text-2xl cursor-pointer"
                 onClick={toggleMenu}
               />
             </div>
@@ -248,7 +248,7 @@ const Content = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-gray-600 opacity-70"
+                className="w-6 h-6 text-orange-500 "
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"

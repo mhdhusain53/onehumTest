@@ -101,12 +101,12 @@ const Navbar = (props) => {
                 </Link>
 
                 {/* Right Div */}
-                <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base my-1.5 z-0  w-32 sm:w-40  md:w-44 lg:w-56 " ref={boxRef}>
+                <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base my-1.5 z-0  w-32 sm:w-40  md:w-44 lg:w-56 " >
                     {/* Welcome Text and Name */}
-                    <button className="border-2 rounded-full bg-white py-1 px-2 flex ml-auto justify- items-center user"
-                        onClick={toggleBox}>
+                    <button className="border-2 rounded-full bg-white py-1.5 px-2 flex ml-auto justify- items-center user"
+                        onClick={toggleBox} ref={boxRef}>
 
-                        <img src="./images/User2.png" className="w-8 h-6 mx-auto pr-2" />
+                        <img src="./images/User2.png" className="w-7 h-5 mx-auto pr-2" />
 
                         {!isBoxVisible ? <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="8 4 16 12 8 20"></polyline>
@@ -202,16 +202,16 @@ const Navbar = (props) => {
                     {/* Buttons A, B, C */}
                     <div className="hidden xl:flex items-center space-x-4">
 
-                        <button className="   cursor-pointer darkOrange hover:underline hover:decoration-gray-100 hover:text-gray-100">
-                            <Link className="hover:decoration-gray-100 darkOrange" to="../home">
+                        <button className="   cursor-pointer darkOrange hover:underline hover:decoration-orange-400 ">
+                            <Link className="hover:decoration-orange-400 darkOrange" to="../home">
                                 Products
                             </Link>
                         </button>
 
                         <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className="   cursor-pointer darkOrange0 hover:underline hover:decoration-gray-500 ">
-                            <Link className="hover:decoration-gray-100 darkOrange" to="../home">
+                        <button className="   cursor-pointer darkOrange0 hover:underline hover:decoration-orange-400 ">
+                            <Link className="hover:decoration-orange-400 darkOrange" to="../home">
                                 {props.val.category}
                             </Link>
 
@@ -219,8 +219,9 @@ const Navbar = (props) => {
 
                         <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className=" cursor-pointer darkOrange underline decoration-orange-200 hover:decoration-orange-400 darkOrange">
-                            {props.val.title}
+                        <button className=" cursor-pointer darkOrange ">
+                        {props.val.title}
+                            
                         </button>
 
                         {Cards_Data
@@ -231,8 +232,8 @@ const Navbar = (props) => {
                             .map((item) => (
                                 <>
                                     <h2 className="text-xl mb-1 darkOrange font-semibold"> {`|`} </h2>
-                                    <button className="   cursor-pointer darkOrange hover:underline hover:decoration-gray-100 ">
-                                        <Link className="hover:decoration-gray-100 darkOrange0" to={`../${item.route}`}>
+                                    <button className="   cursor-pointer darkOrange hover:underline hover:decoration-orange-400 ">
+                                        <Link className="hover:decoration-orange-400 darkOrange" to={`../${item.route}`}>
                                             {item.title}
                                         </Link>
 
@@ -252,7 +253,7 @@ const Navbar = (props) => {
 
                         <button
                             onClick={toggleFilter}
-                            className="px-4 py-2 text-xl darkOrange btnn rounded-md "
+                            className="px-4 py-2 text-xl text-orange-500 focus:border-0 btnn rounded-md "
                         >
                             <FaBars />
                         </button>
@@ -274,11 +275,11 @@ const Navbar = (props) => {
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-6 h-6 text-gray-600 opacity-70"
+                        className="w-8 h-7 text-orange-500"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2"
+                        strokeWidth="2.2"
                     >
                         <path
                             strokeLinecap="round"
@@ -289,7 +290,7 @@ const Navbar = (props) => {
                 </button>
 
                 <div className="px-3 my-0 flex items-center ">
-                    <h2 className="text-xl 2xl:text-2xl text-left pr-2 pb-1 text-gray-600 sidenavbar font-bold  inline align-middle">
+                    <h2 className="text-xl 2xl:text-2xl text-left pr-2 pb-1 darkBlue sidenavbar font-bold  inline align-middle">
                         Categories
                     </h2>
 
@@ -319,8 +320,8 @@ const Navbar = (props) => {
                                             className="flex items-center justify-between"
                                             onClick={() => toggleDropdown(cat)}
                                         >
-                                            <span>{cat}:</span>
-                                            <button className="ml-2 text-gray-500 xl:text-2xl focus:outline-none focus:ring-0">
+                                            <span className="darkOrange">{cat}:</span>
+                                            <button className="ml-2 darkBlue xl:text-2xl focus:outline-none focus:ring-0">
                                                 {openCategory === cat ? '−' : '+'}
                                             </button>
                                         </div>
@@ -344,7 +345,7 @@ const Navbar = (props) => {
                                                         to={`../${item.route}`}
                                                         onClick={closeSidebar}
                                                     >
-                                                        <li className="font-medium text-gray-500 text-sm 2xl:text-lg ml-3 rounded-lg hover:text-gray-700 hover:bg-gray-100 px-2 py-1  ">
+                                                        <li className="font-medium text-gray-500 text-sm 2xl:text-base ml-3 rounded-lg hover:text-orange-500 hover:bg-gray-100 px-2 py-1  ">
                                                             {item.title}
                                                         </li>
                                                     </Link>

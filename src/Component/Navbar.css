@@ -9,6 +9,7 @@
 .subnav2{
 
     background: linear-gradient(to right, #b9e0b9,#c6e7c6,#b9e0b9, #c6e7c6,#b9e0b9);
+    background: linear-gradient(to right, rgb(250, 250, 250), rgb(247, 247, 247), rgb(250, 250, 250), rgb(247, 247, 247), rgb(250, 250, 250)); 
 
     /* border: solid 2px #fdcf97; */
     
@@ -21,9 +22,11 @@
 }
 
 .darkOrange{
-    color: #EF7701;
-}.darkOrange:hover{
-    color: #EF7701;
+    color: #4fa4b1;
+}
+
+.darkBlue{
+    color: #2E8A99;
 }
 
 
@@ -31,6 +34,11 @@
     transform: scale(1.2);
 
 }
+.btnn:focus {
+    outline: none;
+  }
+
+  
 .nav-img{
     width: 14% ;
     
@@ -52,9 +60,6 @@
     z-index: 9999;
 }
 
-:hover .btnn{
-  /* background-color: ; */
-}
 
 /* @media (max-width: 520px) {
     .nav-img{
