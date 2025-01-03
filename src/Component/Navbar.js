@@ -96,14 +96,17 @@ const Navbar = (props) => {
     return (
         <div>
             <nav className="navbar flex justify-between items-center   ">
-
-                <Link className="flex-grow flex justify-left " to="../home">
+                <div  className="flex-grow flex justify-left ">
+                <Link to="../home">
                     <img
                         src="/images/OneHumLogo2.png"
                         alt="Center Logo"
                         className="h-auto w-20 sm:w-24 md:w-32 lg:w-36  cursor-pointer"
                     />
                 </Link>
+
+                </div>
+               
 
                 {/* Right Div */}
                 <div className="relative flex-shrink-0 text-right text-xs sm:text-sm md:text-base my-1.5 z-0  w-32 sm:w-40  md:w-44 lg:w-56 " >
@@ -124,78 +127,8 @@ const Navbar = (props) => {
 
                     </button>
 
-                    {/* Hidden Box */}
-                    {/* {isBoxVisible && (<div
-                        className={`absolute -right-3 mt-2 bg-white shadow-md rounded-lg w-40 md:w-44  hover:bg-gray-100 p-2 z-100
-            }`}
-                        id="signoutbox"
-                    >
-                        <p className="text-gray-400 font-semibold text-sm text-center bg-gray-100 rounded-lg py-1.5 px-1.5">
-                            Welcome
-                            <span
-                                className="block font-normal text-sm cursor-pointer text-gray-600 "
-                            >
-                                {props.name}
-                            </span>
-                        </p>
-
-                        <hr className="text-gray-400 my-2 mb-3 border-t-1 border-gray-400" />
-
-                        <button
-                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
-                        >
-                            <img src="./images/Account.png" className="w-5 h-5" />
-                            <span className="ml-1">Account</span>
-
-                        </button>
-
-                        <button
-                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
-                        >
-                            <img src="./images/Setting.png" className="w-5 h-5" />
-                            <span className="ml-1">Setting</span>
-
-                        </button>
-
-                        <button
-                            onClick={() => props.logout()}
-                            className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex jutify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500 "
-                        >
-                            <img src="./images/SignOut.png" className="w-5 h-4" />
-                            <span className="ml-1">Sign Out</span>
-
-                        </button>
-                    </div>)} */}
+                  
                 </div>
-
-
-
-                {/* <Link className="navbar-brand nav-img" to="/home">
-                    <img src="/images/OneHumLogo2.png" className="nav-image" />
-                </Link> */}
-
-                {/* Center Image */}
-                {/* <div className="relative flex-shrink-0 text-right ml-auto nav-img" ref={boxRef}>
-                    <p className="text-gray-300">
-                        Welcome,
-                        <span
-                            onClick={toggleBox}
-                            className="block cursor-pointer text-gray-100 hover:underline hover:decoration-gray-200"
-                        >
-                            {props.name}
-                        </span>
-                    </p>
-                    {isBoxVisible && (
-                        <div className="absolute right-0 mt-2 bg-white shadow-md rounded-lg w-40">
-                            <button
-                                onClick={() => props.logout()}
-                                className="block w-full px-4 py-2 text-left rounded-lg text-gray-700 hover:bg-gray-100 hover:underline hover:decoration-gray-500"
-                            >
-                                Sign Out
-                            </button>
-                        </div>
-                    )}
-                </div> */}
             </nav>
 
             {/* Side Navbar */}
@@ -222,7 +155,7 @@ const Navbar = (props) => {
 
                         <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className=" cursor-pointer darkOrange ">
+                        <button className=" cursor-pointer darkOrange cursor-not-allowed underline decoration-orange-400 ">
                         {props.val.title}
                             
                         </button>
@@ -256,7 +189,7 @@ const Navbar = (props) => {
 
                         <button
                             onClick={toggleFilter}
-                            className="md:px-4 py-2 text-xl text-orange-500 focus:border-0 btnn rounded-md "
+                            className="md:px-4 py-2 text-xl text-orange-500 focus:border-0 btnn transform transition-transform duration-300 hover:scale-[1.15] rounded-md "
                         >
                             <FaBars />
                         </button>
@@ -270,15 +203,15 @@ const Navbar = (props) => {
             {/* Filters Section (Full Height Below Navbar) */}
             {isFilterVisible && (<div
                 ref={filterRef}
-                className={`absolute top-12 mt-2 right-0 w-52 md:w-64 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg transform transition-all duration-300  h-full`}
+                className={`absolute top-12 mt-2 right-0 w-52 md:w-64 bg-white shadow-lg shadow-gray-500 z-20  rounded-tl-lg h-full  overflow-y-auto max-h-[calc(100vh-3rem)] pb-3`}
 
             >
                 <button
-                    className="flex text-gray-600 hover:text-gray-800 focus:outline-none items-right mr-auto font-light  mb-1 pl-3 py-2 pt-3" onClick={closeSidebar}
+                    className="flex focus:outline-none items-right mr-auto font-light  mb-1  py-2 pt-3 transform transition-transform duration-300 hover:scale-[1.09]" onClick={closeSidebar}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="w-8 h-7 text-orange-500"
+                        className="w-10 h-8 py-0.5 text-white hover:shadow-lg  bgback rounded-r-full pr-2"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -300,7 +233,7 @@ const Navbar = (props) => {
                     <img
                         src="/images/Categories.png"
                         alt="Center Logo"
-                        className="h-8 w-8 bg-blue-100 p-1  rounded-lg cursor-pointer inline align-middle"
+                        className="h-8 w-8 p-1  rounded-lg cursor-pointer inline align-middle"
                     />
 
 
@@ -311,8 +244,7 @@ const Navbar = (props) => {
                 <div className=" px-2 my-2 mx-3 border-2 bg-gray-50 border-gray-200 pt-2 rounded-lg">
                     <ul className=" text-center">
 
-                       
-
+                    
 
                         <>
                             {disCategory.map((cat) => {
@@ -369,6 +301,9 @@ const Navbar = (props) => {
                 </div>
             </div>)}
 
+
+
+            {/* logout card */}
             {isBoxVisible && (<div
                         className={`absolute right-2 top-14 bg-white shadow-md rounded-lg w-40 md:w-44  hover:bg-gray-100 p-2 z-100
             }`}

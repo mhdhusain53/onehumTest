@@ -29,11 +29,11 @@
     color: #2E8A99;
 }
 
-
-.btnn:hover{
-    transform: scale(1.2);
-
+.bgback{
+    background-color: #4fa4b1;
 }
+
+
 .btnn:focus {
     outline: none;
   }
@@ -81,3 +81,34 @@
         text-align: left !important;
     }
 } */
+@keyframes slideIn {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+      transform: translateX(0); /* End at its normal position */
+    }
+  }
+  
+  @keyframes slideOut {
+    0% {
+      transform: translateX(0); /* Start at its normal position */
+    }
+    100% {
+      transform: translateX(100%); /* Slide out to the right */
+    }
+  }
+  
+  .sidebar {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .sidebar.slide-in {
+    animation-name: slideIn;
+  }
+  
+  .sidebar.slide-out {
+    animation-name: slideOut;
+  }
+  

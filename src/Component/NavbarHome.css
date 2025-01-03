@@ -37,6 +37,10 @@
   color: #EF7701;
 }
 
+.filterback{
+  background-color: #4fa4b1;
+}
+
 .categorybtn:hover{
     /* transform: scale(1.04); */
     border: #EF7701 2px solid;

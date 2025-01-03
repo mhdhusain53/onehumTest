@@ -15,7 +15,7 @@ var Cards_Data=[
         tagline: "Customer Relationship Management",
         category: "Engagement",
         image: "/images/OneViewExecutive.png",
-        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/144fffb5-f3fb-4c66-b92e-6a61b60779d0?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1733150503477",
+        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/36645d39-10d3-4827-92c7-9f54e765e253?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1735825671796&source=portal",
         access:"",
         route:"CRM"
     }
@@ -26,7 +26,7 @@ var Cards_Data=[
         tagline: "Incentive Compensation",
         category: "Performance",
         image: "/images/Peak.png",
-        link: "https://app.powerbi.com/reportEmbed?reportId=a7189dce-cf0d-4975-a0bf-eba13704d8f2&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
+        link: "https://app.powerbi.com/reportEmbed?reportId=cbfd81b6-dae9-4e93-b8d5-dcb5879a113d&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
         access:"",
         route:"Peak"
     },
@@ -56,7 +56,7 @@ var Cards_Data=[
         tagline: "DIY Performance",
         category: "Performance",
         image: "/images/SelfServe.png",
-        link: "https://app.powerbi.com/reportEmbed?reportId=18d745ae-2b97-4495-bf55-827b04ac3a40&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
+        link: "https://app.powerbi.com/reportEmbed?reportId=dd3da1c2-15d6-4605-8fe9-a38283b6ae39&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
         access:"",
         route:"Self-Serve"
     },{
@@ -65,7 +65,7 @@ var Cards_Data=[
         tagline: "Business Intelligence",
         category: "Performance",
         image: "/images/Pulse.png",
-        link: "https://app.powerbi.com/reportEmbed?reportId=78252a05-9ea1-4ce4-a00e-e4ebc125ed87&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
+        link: "https://app.powerbi.com/reportEmbed?reportId=bc0af5b1-3e46-4454-aade-79991dd793f4&autoAuth=true&ctid=97d58c70-a9f4-4aa8-b28f-f833520dc90c",
         access:"",
         route:"Pulse"
     },

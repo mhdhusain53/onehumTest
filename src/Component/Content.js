@@ -219,7 +219,7 @@ const Content = () => {
 
             <div className="flex lg:hidden justify-end items-right p-2">
               <FaBars
-                className="text-orange-500 btnn rounded-md text-2xl cursor-pointer"
+                className="text-orange-500 btnn  rounded-md text-2xl cursor-pointer"
                 onClick={toggleMenu}
               />
             </div>
@@ -240,15 +240,15 @@ const Content = () => {
       {
         isMenuOpen && (
           <div
-            ref={sidebarRef} className="absolute h-full top-12 right-0 w-52 bg-gray-50  shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 px-3 lg:hidden bg-gray-100 border-t "
+            ref={sidebarRef} className="absolute h-full top-12 right-0 w-52 bg-gray-50 px-3 shadow-lg shadow-gray-500  rounded-tl-lg flex z-50 flex-col space-y-2 py-2 lg:hidden bg-gray-100 border-t overflow-y-auto max-h-[calc(100vh-3rem)]"
             id="sidenavbar">
 
             <button
-              className="flex text-gray-600 hover:text-gray-800 focus:outline-none items-right mr-auto font-light my-1 mb-2" onClick={closeSidebar}
+              className="flex text-gray-600 hover:text-gray-800 focus:outline-none items-right mr-auto font-light my-2 mb-2  duration-300 hover:scale-[1.09]" onClick={closeSidebar}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-orange-500 "
+                className="w-10 h-8 py-0.5 text-white hover:shadow-lg   pr-2 filterback absolute left-0 rounded-r-full"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -262,7 +262,7 @@ const Content = () => {
               </svg>
             </button>
 
-            <div className="relative w-full mx-auto ">
+            <div className="relative w-full mx-auto mt-4 pt-4">
               {/* Search Icon */}
               <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only ">Search</label>
               <div class="relative">
@@ -348,11 +348,7 @@ const Content = () => {
               ))}
             </div>
 
-
             {/* Search Box */}
-
-
-
 
 
           </div>
