@@ -39,7 +39,7 @@ var Cards_Data=[
         tagline: "Sales Operations Hub",
         category: "Productivity",
         image: "/images/Vital360.png",
-        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/90c7afe1-3051-4eef-9466-42a28ca43ff2?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1736141938598",
+        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/fd4b9f03-8a6e-47a0-a277-56ec647474e2?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1736166921957",
         access:"",
         route:"Vital360",
         lastUpdateDate:"12/31/2024"
@@ -50,7 +50,7 @@ var Cards_Data=[
         tagline: "Business Reviews",
         category: "Productivity",
         image: "/images/PowerPack.png",
-        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/ec4b471a-6986-49b8-bb6b-c014f2d3b2d8?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1733206283864",
+        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/ec4b471a-6986-49b8-bb6b-c014f2d3b2d8?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1736161430362",
         access:"",
         route:"Power-Pack",
         lastUpdateDate:"9/30/2024"
