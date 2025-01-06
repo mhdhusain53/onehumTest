@@ -24,13 +24,13 @@ function Card(props) {
       </div>
       {/* Footer Section */}
       <div className="h-18 pb-2 absolute w-full bottom-0 fcolor ">
-        <p className="text-[14px] text-center text-white footerc ">Last Update Date: 07/12/2024</p>
+        <p className="text-[14px] text-center text-white footerc ">Last Update Date: {props.val.lastUpdateDate}</p>
       </div>
       <Link to={`../${props.val.route}`} class="stretched-link"></Link>
 
 
 
-      <button className="absolute right-3 top-3  w-10 h-10 rounded-full flex items-center justify-center editbutton">
+      {/* <button className="absolute right-3 top-3  w-10 h-10 rounded-full flex items-center justify-center editbutton">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-5 h-5 "
@@ -45,7 +45,7 @@ function Card(props) {
             d="M12 5v.01M12 12v.01M12 19v.01"
           />
         </svg>
-      </button>
+      </button> */}
 
 
 

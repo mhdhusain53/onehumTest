@@ -105,7 +105,7 @@ const NavbarHome = (props) => {
 
             <hr className="text-gray-400 my-2 mb-3 border-t-1 border-gray-400" />
 
-            <button className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex justify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500">
+            {/* <button className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex justify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500">
               <img src="./images/Account.png" className="w-5 h-5" />
               <span className="ml-1">Account</span>
             </button>
@@ -113,7 +113,7 @@ const NavbarHome = (props) => {
             <button className="block w-full px-2 py-1.5 my-1 text-left text-xs sm:text-sm md:text-base flex justify- items-center rounded-lg hover:bg-gray-100 text-gray-700 hover:underline hover:decoration-gray-500">
               <img src="./images/Setting.png" className="w-5 h-5" />
               <span className="ml-1">Setting</span>
-            </button>
+            </button> */}
 
             <button
               onClick={() => props.logout()}

@@ -192,14 +192,14 @@ const Content = () => {
                 </div>
 
 
-                <label className="flex items-center mt-2 space-x-2">
+                {/* <label className="flex items-center mt-2 space-x-2">
                   <input
                     type="checkbox"
 
                     className=" w-4 h-4 text-blue-600 bg-white border-gray-300 rounded-xl focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2"
                   />
                   <span className="text-gray-800">Favorites</span>
-                </label>
+                </label> */}
               </div>
 
 
@@ -303,13 +303,13 @@ const Content = () => {
 
 
             {/* Buttons Favorite, All */}
-            <label className="flex items-center mx-auto mt-2 space-x-2  ">
+            {/* <label className="flex items-center mx-auto mt-2 space-x-2  ">
               <input
                 type="checkbox"
                 className="w-4 h-4 text-blue-500 border-gray-300 rounded focus:ring-blue-400 checked:bg-black"
               />
               <span className="text-gray-600">Favorites</span>
-            </label>
+            </label> */}
 
             {/* <h2 className="text-lg md:hidden font-semibold pt-3 mt-3  text-gray-600">Categories:</h2> */}
 
