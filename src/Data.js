@@ -6,7 +6,7 @@ var Cards_Data=[
         tagline: "Key Account Managment",
         category: "Engagement",
         image: "/images/KAM.png",
-        link: " https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/e0d37d77-14cc-432f-bac4-6a50f444b640?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&hint=71758705-5a76-494b-9556-a2a643f06405&sourcetime=1733150695908",
+        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/e0d37d77-14cc-432f-bac4-6a50f444b640?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&hint=71758705-5a76-494b-9556-a2a643f06405&sourcetime=1736143913940&source=portal",
         access:"",
         route:"KAM"
     },{
@@ -36,7 +36,7 @@ var Cards_Data=[
         tagline: "Sales Operations Hub",
         category: "Productivity",
         image: "/images/Vital360.png",
-        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/fd4b9f03-8a6e-47a0-a277-56ec647474e2?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1733214477864",
+        link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/90c7afe1-3051-4eef-9466-42a28ca43ff2?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&sourcetime=1736141938598",
         access:"",
         route:"Vital360"
     },
