@@ -25,6 +25,10 @@
     color: #4fa4b1;
 }
 
+.bgselected{
+  background-color: rgb(207, 207, 207) !important;
+}
+
 .darkBlue{
     color: #2E8A99;
 }

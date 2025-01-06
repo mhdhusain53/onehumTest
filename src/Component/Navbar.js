@@ -136,18 +136,18 @@ const Navbar = (props) => {
                 {/* Desktop View */}
                 <div className="flex  items-center justify-end xl:justify-between py-1">
                     {/* Buttons A, B, C */}
-                    <div className="hidden xl:flex items-center space-x-4">
+                    <div className="hidden xl:flex items-center space-x-3">
 
-                        <button className="  pl-4 cursor-pointer darkOrange hover:underline hover:decoration-orange-400 ">
-                            <Link className="hover:decoration-orange-400 darkOrange" to="../home">
+                        <button className="  pl-4 cursor-pointer darkOrange hover:underline hover:decoration-gray-400 ">
+                            <Link className="hover:decoration-gray-400 darkOrange" to="../home">
                                 Products
                             </Link>
                         </button>
 
                         <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className="   cursor-pointer darkOrange0 hover:underline hover:decoration-orange-400 ">
-                            <Link className="hover:decoration-orange-400 darkOrange" to="../home">
+                        <button className="   cursor-pointer darkOrange0 hover:underline hover:decoration-gray-400 ">
+                            <Link className="hover:decoration-gray-400 darkOrange" to="../home">
                                 {props.val.category}
                             </Link>
 
@@ -155,7 +155,7 @@ const Navbar = (props) => {
 
                         <h2 className="text-xl font-bold darkOrange mb-1"> {`>`} </h2>
 
-                        <button className=" cursor-pointer darkOrange cursor-not-allowed underline decoration-orange-400 ">
+                        <button className="  darkOrange  bg-gray-200 rounded-md px-2 py-0.5 cursor-not-allowed">
                         {props.val.title}
                             
                         </button>
@@ -168,8 +168,8 @@ const Navbar = (props) => {
                             .map((item) => (
                                 <>
                                     <h2 className="text-xl mb-1 darkOrange font-semibold"> {`|`} </h2>
-                                    <button className="   cursor-pointer darkOrange hover:underline hover:decoration-orange-400 ">
-                                        <Link className="hover:decoration-orange-400 darkOrange" to={`../${item.route}`}>
+                                    <button className="   cursor-pointer darkOrange hover:underline hover:decoration-gray-400 ">
+                                        <Link className="hover:decoration-gray-400 darkOrange" to={`../${item.route}`}>
                                             {item.title}
                                         </Link>
 
