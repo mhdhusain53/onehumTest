@@ -3,7 +3,7 @@ var Cards_Data=[
     {
         id: 6,
         title:"ConnExa",
-        tagline: "Key Account Managment",
+        tagline: "Key Account Management",
         category: "Engagement",
         image: "/images/KAM.png",
         link: "https://apps.powerapps.com/play/e/default-97d58c70-a9f4-4aa8-b28f-f833520dc90c/a/e0d37d77-14cc-432f-bac4-6a50f444b640?tenantId=97d58c70-a9f4-4aa8-b28f-f833520dc90c&hint=71758705-5a76-494b-9556-a2a643f06405&sourcetime=1736143913940&source=portal",
