@@ -60,6 +60,14 @@ var UserAccess=[
             1,2,3,4,5,6,7
         ]
     },
+    {
+        userid : 1009,
+        email: "ajkumar@acuitas360.com",
+        name: "AJ Kumar",
+        pagesid: [
+            1,2,3,4,5,6,7
+        ]
+    }
 ]
 
 export default UserAccess;
